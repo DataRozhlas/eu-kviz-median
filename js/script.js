@@ -20,7 +20,7 @@ class Kviz extends Component {
   sendResults() {
     const { answers } = this.state;
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://gh250k574a.execute-api.eu-west-1.amazonaws.com/prod");
+    xhr.open("POST", "https://k18xbfipii.execute-api.eu-west-1.amazonaws.com/prod");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
       if (xhr.status === 200) {
