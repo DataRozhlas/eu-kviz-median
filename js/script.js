@@ -20,7 +20,7 @@ class Kviz extends Component {
   sendResults() {
     const { answers } = this.state;
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://k18xbfipii.execute-api.eu-west-1.amazonaws.com/prod");
+    xhr.open("POST", "https://gh250k574a.execute-api.eu-west-1.amazonaws.com/prod");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
       if (xhr.status === 200) {
@@ -59,16 +59,17 @@ class Kviz extends Component {
         {!done ? (
           <div id="choices">
             {`Otázka: ${questions[question]}`}
-            <br />
-            <button type="button" value={1} onClick={this.handleClick}>{choices[question][0]}</button>
-            <br />
-            <button type="button" value={2} onClick={this.handleClick}>{choices[question][1]}</button>
-            <br />
-            <button type="button" value={3} onClick={this.handleClick}>{choices[question][2]}</button>
-            <br />
-            <button type="button" value={4} onClick={this.handleClick}>{choices[question][3]}</button>
-            <br />
-            <button type="button" value={5} onClick={this.handleClick}>{choices[question][4]}</button>
+            {
+          choices[question].map((val, idx)=> {
+            return (
+              //<br /><button type="button" value={idx} onClick={this.handleClick}>{val}</button>
+              <div className="buttonek">
+                <button type="button" value={val[1]} onClick={this.handleClick}>{val[0]}</button>
+              </div>
+            )
+          })
+          }
+  
           </div>
         ) : (
           <div>
