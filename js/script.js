@@ -4,6 +4,7 @@ import { render } from "react-dom";
 import { questions, choices, voterCategories } from "./questions";
 
 const root = "https://data.irozhlas.cz/eu-kviz-median/";
+const isDesktop = window.innerWidth > 600;
 
 function processRawResults(results) {
   return results.map((el, idx) => [Math.round(el * 100), idx]).sort((a, b) => b[0] - a[0]);
@@ -14,14 +15,17 @@ class EuApp extends Component {
     super(props);
 
     this.state = {
-      question: 0,
-      answers: new Array(20),
+      question: 19,
+      answers: new Array(20).fill(1),
       done: false,
-      results: null,
+      results: undefined,
+      shareLink: undefined,
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.sendResults = this.sendResults.bind(this);
+    this.FbShare = this.FbShare.bind(this);
+    this.TwShare = this.TwShare.bind(this);
   }
 
   sendResults() {
@@ -38,13 +42,23 @@ class EuApp extends Component {
         xhr2.setRequestHeader("Content-Type", "application/json");
         xhr2.onload = () => {
           if (xhr2.status === 200) {
-            console.log(xhr2.responseText);
+            this.setState({ shareLink: xhr2.responseText.substring(1, xhr2.responseText.length - 1) });
           }
         };
         xhr2.send(xhr.responseText);
       }
     };
     xhr.send(JSON.stringify(answers));
+  }
+
+  FbShare() {
+    const { shareLink } = this.state;
+    window.open(`${`https://www.facebook.com/sharer/sharer.php?u=${shareLink}`}`, "Sdílení", "width=550,height=450,scrollbars=no");
+  }
+
+  TwShare() {
+    const { shareLink } = this.state;
+    window.open(`${`https://twitter.com/share?url=${shareLink}`}`, "Sdílení", "width=550,height=450,scrollbars=no");
   }
 
   handleClick(e) {
@@ -63,7 +77,7 @@ class EuApp extends Component {
 
   render() {
     const {
-      question, done, results,
+      question, done, results, shareLink,
     } = this.state;
 
     return (
@@ -88,7 +102,7 @@ class EuApp extends Component {
               </div>
               {results
                 ? (
-                  <div>
+                  <React.Fragment>
                     <div id="top-result">
                       <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]]} />
                       <div id="top-result-name">
@@ -111,7 +125,21 @@ class EuApp extends Component {
                         </div>
                       ))}
                     </div>
-                  </div>
+                    <div id="results-share">
+                      {isDesktop
+                        ? (
+                          <React.Fragment>
+                            <button className="btn btn-primary" type="submit" onClick={this.FbShare} disabled={shareLink ? null : true}>Sdílet na Facebooku</button>
+                            <button className="btn btn-primary" type="submit" onClick={this.TwShare} disabled={shareLink ? null : true}>Sdílet na Twitteru</button>
+                          </React.Fragment>
+                        ) : (
+                          <React.Fragment>
+                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareLink}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-primary" type="submit" disabled={shareLink ? null : true}>Sdílet na Facebooku</button></a>
+                            <a href={`https://twitter.com/share?url=${shareLink}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-primary" type="submit" disabled={shareLink ? null : true}>Sdílet na Twitteru</button></a>
+                          </React.Fragment>
+                        )}
+                    </div>
+                  </React.Fragment>
                 ) : (
                   <div id="waiting">
                     {"Výsledek se načítá..."}
