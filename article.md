@@ -6,4 +6,4 @@ styles: []
 libraries: [] #jquery, d3, highcharts, datatables
 options: [noheader, nopic] #wide, noheader (, nopic)
 ---
-<div id="kviz"></div>
+<div id="eu-app"></div>

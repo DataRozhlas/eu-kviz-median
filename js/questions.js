@@ -8,7 +8,7 @@ export const questions = [
   "Souhlasíte s tvrzením, že z evropské integrace těží velké státy, které rozhodují na úkor malých států (jako Česká republika), jejichž zájmy neberou v potaz?",
   "Někteří lidé považují členství Česka v Evropské unii za prospěšné, jiní za škodlivé. Je pro Vás osobně členství v EU prospěšné?",
   "Souhlasíte s tím, že členství Česka v EU vede k vyššímu růstu české ekonomiky?",
-  "Souhlasíte s tvrzením, že EU udělala hodně pro to, aby se v ČR zvýšila životní úroveň a přiblížila se tak životní úrovni v zemích Západní Evropy?",
+  "Souhlasíte s tvrzením, že EU udělala hodně pro to, aby se v ČR zvýšila životní úroveň a přiblížila se tak životní úrovni v zemích západní Evropy?",
   "Členství v EU může přinášet různé výhody nebo omezení. Platí pro vás osobně, že díky členství v EU máte větší šance najít si práci?",
   "Souhlasíte s tvrzením, že EU nutí Českou republiku přijímat zbytečné a neefektivní zákony?",
   "Někteří lidé považují členství Česka v Evropské unii za prospěšné, jiní za škodlivé. Souhlasíte s tvrzením, že členství v EU je prospěšné pro život v Česku za 20 let?",
@@ -48,12 +48,12 @@ export const choices = {
 
 export const voterCategories = [
   "Obránce",
-  "Rezignovaný pesimista",
+  "Protisystémový pesimista",
   "Městský liberál",
-  "Užitkář",
+  "Profitář",
   "Vyloučený",
   "Skeptický reformista",
-  "Tuzemský pragmatik",
+  "Dočasný pragmatik",
 ];
 
 export default questions;

@@ -9,7 +9,7 @@ function processRawResults(results) {
   return results.map((el, idx) => [Math.round(el * 100), idx]).sort((a, b) => b[0] - a[0]);
 }
 
-class Kviz extends Component {
+class EuApp extends Component {
   constructor(props) {
     super(props);
 
@@ -67,62 +67,67 @@ class Kviz extends Component {
     } = this.state;
 
     return (
-      <div>
-        {!done ? (
-          <div>
-            <div id="question-header">
-              {`Otázka ${question + 1} z 20`}
-            </div>
-            <div id="question-text" dangerouslySetInnerHTML={{ __html: questions[question] }} />
-            <div id={`question-buttons-${choices[question].length}`}>
-              {choices[question].map((val, idx, arr) => (
-                <button type="button" key={val} className={`btn btn-${arr.length} btn-${arr.length}-${idx + 1}`} value={idx + 1} onClick={this.handleClick}>{val}</button>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div>
-            <div id="done">
-              {"Hotovo! Ve vztahu k Evropské unii jste:"}
-            </div>
-            {results
-              ? (
-                <div>
-                  <div id="top-result">
-                    <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]]} />
-                    <div id="top-result-name">
-                      {voterCategories[results[0][1]]}
-                    </div>
-                    <div id="top-result-pct">
-                      {`${String(results[0][0]).replace(".", ",")} %`}
-                    </div>
-                  </div>
-                  <div id="results-categories">
-                    {results.slice(1).map(el => (
-                      <div className="results-category" key={el[1]}>
-                        <img src={`${root}img/${el[1]}.svg`} className="results-img" alt={voterCategories[el[1]]} />
-                        <div className="results-category-name">
-                          {voterCategories[el[1]]}
-                        </div>
-                        <div className="results-category-pct">
-                          {`${String(el[0]).replace(".", ",")} %`}
-                        </div>
+      <React.Fragment>
+        <div id="kviz">
+          {!done ? (
+            <React.Fragment>
+              <div id="question-header">
+                {`Otázka ${question + 1} z 20`}
+              </div>
+              <div id="question-text" dangerouslySetInnerHTML={{ __html: questions[question] }} />
+              <div id={`question-buttons-${choices[question].length}`}>
+                {choices[question].map((val, idx, arr) => (
+                  <button type="button" key={val} className={`btn btn-${arr.length} btn-${arr.length}-${idx + 1}`} value={idx + 1} onClick={this.handleClick}>{val}</button>
+                ))}
+              </div>
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <div id="done">
+                {"Hotovo! Ve vztahu k Evropské unii jste:"}
+              </div>
+              {results
+                ? (
+                  <div>
+                    <div id="top-result">
+                      <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]]} />
+                      <div id="top-result-name">
+                        {voterCategories[results[0][1]]}
                       </div>
-                    ))}
+                      <div id="top-result-pct">
+                        {`${String(results[0][0]).replace(".", ",")} %`}
+                      </div>
+                    </div>
+                    <div id="results-categories">
+                      {results.slice(1).map(el => (
+                        <div className="results-category" key={el[1]}>
+                          <img src={`${root}img/${el[1]}.svg`} className="results-img" alt={voterCategories[el[1]]} />
+                          <div className="results-category-name">
+                            {voterCategories[el[1]]}
+                          </div>
+                          <div className="results-category-pct">
+                            {`${String(el[0]).replace(".", ",")} %`}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ) : (
-                <div id="waiting">
-                  {"Výsledek se načítá..."}
-                </div>
-              )
-              }
-          </div>
-        )}
-      </div>
+                ) : (
+                  <div id="waiting">
+                    {"Výsledek se načítá..."}
+                  </div>
+                )
+                }
+            </React.Fragment>
+          )}
+        </div>
+        <div id="category-box">
+          {"Já jsem boxík jéjéjé"}
+        </div>
+      </React.Fragment>
     );
   }
 }
 
 // ========================================
-render(<Kviz />, document.getElementById("kviz"));
+render(<EuApp />, document.getElementById("eu-app"));
