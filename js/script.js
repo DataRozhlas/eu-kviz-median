@@ -2,10 +2,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import { questions, choices, voterCategories } from "./data";
-import { GrafVztah } from "./grafVztah";
-import { GrafPostoje } from "./grafPostoje";
-import { GrafDuvera } from "./grafDuvera";
-import { GrafVliv } from "./grafVliv";
+import { RadarGraf } from "./radarGraf";
 import { GrafPreference } from "./grafPreference";
 
 const root = "https://data.irozhlas.cz/eu-kviz-median/";
@@ -18,12 +15,10 @@ function processRawResults(results) {
 const DetailBox = ({ catId }) => (
   <div id="detail-box">
     <div className="detail-box-radary">
-      <GrafVztah catId={catId} />
-      <GrafPostoje catId={catId} />
-    </div>
-    <div className="detail-box-radary">
-      <GrafDuvera catId={catId} />
-      <GrafVliv catId={catId} />
+      <RadarGraf catId={catId} graphId={0} />
+      <RadarGraf catId={catId} graphId={1} />
+      <RadarGraf catId={catId} graphId={2} />
+      <RadarGraf catId={catId} graphId={3} />
     </div>
     <GrafPreference catId={catId} />
   </div>

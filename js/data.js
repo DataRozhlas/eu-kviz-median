@@ -80,4 +80,27 @@ export const graphPrefData = [
   [27, 5, 3, 7, 3, 7, 9, 4, 4, 6, 25],
 ];
 
+export const graphMeta = [
+  [
+    "Vztah k EU",
+    ["Pro přijetí eura", "Czexit – pro referendum", "Czexit – pro odchod", "Prospěch osobní", "Prospěch pro region", "Prospěch pro ČR", "Prospěch pro ČR za 20 let"],
+    [0, 7],
+  ],
+  [
+    "Postoje a kapitál",
+    ["Profit z globalizace", "Obavy z migrace", "Vyšší kulturní kapitál", "Vyšší sociální kapitál", "Chudoba", "Autoritářství", "Náchylnost k populismu", "Nadějná budoucnost společnosti"],
+    [7, 15],
+  ],
+  [
+    "Důvěra institucím",
+    ["Evropská unie", "Demokracie v ČR", "Vláda ČR", "Prezident ČR ", "Zastupitelstvo obce", "Zastupitelstvo kraje"],
+    [15, 21],
+  ],
+  [
+    "Vliv EU na ČR",
+    ["EU příliš zasahuje do věcí ČR", "EU zvyšuje vymahatelnost práva", "Evropská integrace se má prohlubovat", "Výhodou EU je studium/práce v zahraničí"],
+    [21, 25],
+  ],
+];
+
 export default questions;

@@ -3,11 +3,11 @@ import React from "react";
 import Highcharts from "highcharts/highcharts";
 import HighchartsMore from "highcharts/highcharts-more";
 import HighchartsReact from "highcharts-react-official";
-import { voterCategories, graphData } from "./data";
+import { voterCategories, graphData, graphMeta } from "./data";
 
 HighchartsMore(Highcharts);
 
-export const GrafVliv = ({ catId }) => (
+export const RadarGraf = ({ catId, graphId }) => (
   <HighchartsReact
     highcharts={Highcharts}
     options={{
@@ -16,7 +16,7 @@ export const GrafVliv = ({ catId }) => (
         type: "line",
       },
       title: {
-        text: "Vliv EU na ČR",
+        text: graphMeta[graphId][0],
         x: 0,
       },
       pane: {
@@ -26,7 +26,7 @@ export const GrafVliv = ({ catId }) => (
         title: {
           text: "",
         },
-        categories: ["EU příliš zasahuje do věcí ČR", "EU zvyšuje vymahatelnost práva", "Evropská integrace se má prohlubovat", "Výhodou EU je studium/práce v zahraničí"],
+        categories: graphMeta[graphId][1],
         tickmarkPlacement: "on",
         lineWidth: 0,
       },
@@ -64,13 +64,13 @@ export const GrafVliv = ({ catId }) => (
       series: [{
         name: voterCategories[catId],
         id: "obr",
-        data: graphData[catId + 1].slice(21, 25),
+        data: graphData[catId + 1].slice(graphMeta[graphId][2][0], graphMeta[graphId][2][1]),
         pointPlacement: "on",
         color: "#333",
       }, {
         name: "Populace",
         id: "vsi",
-        data: graphData[0].slice(21, 25),
+        data: graphData[0].slice(graphMeta[graphId][2][0], graphMeta[graphId][2][1]),
         pointPlacement: "on",
         color: "#ccc",
         dashStyle: "dot",
@@ -95,4 +95,4 @@ export const GrafVliv = ({ catId }) => (
   />
 );
 
-export default GrafVliv;
+export default RadarGraf;
