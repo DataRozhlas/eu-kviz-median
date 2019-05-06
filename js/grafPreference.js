@@ -46,7 +46,7 @@ export const GrafPreference = ({ catId }) => (
         },
         series: [{
           name: voterCategories[catId],
-          data: graphPrefData[catId + 1],
+          data: graphPrefData[Number(catId) + 1],
           color: "#333",
         }, {
           name: "Populace",

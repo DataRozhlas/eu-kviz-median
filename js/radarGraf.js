@@ -20,7 +20,7 @@ export const RadarGraf = ({ catId, graphId }) => (
         x: 0,
       },
       pane: {
-        size: "80%",
+        size: "60%",
       },
       xAxis: {
         title: {
@@ -64,7 +64,7 @@ export const RadarGraf = ({ catId, graphId }) => (
       series: [{
         name: voterCategories[catId],
         id: "obr",
-        data: graphData[catId + 1].slice(graphMeta[graphId][2][0], graphMeta[graphId][2][1]),
+        data: graphData[Number(catId) + 1].slice(graphMeta[graphId][2][0], graphMeta[graphId][2][1]),
         pointPlacement: "on",
         color: "#333",
       }, {
@@ -75,22 +75,6 @@ export const RadarGraf = ({ catId, graphId }) => (
         color: "#ccc",
         dashStyle: "dot",
       }],
-      responsive: {
-        rules: [{
-          condition: {
-            maxWidth: 500,
-          },
-          chartOptions: {
-            legend: {
-              align: "center",
-              verticalAlign: "bottom",
-            },
-            pane: {
-              size: "70%",
-            },
-          },
-        }],
-      },
     }}
   />
 );

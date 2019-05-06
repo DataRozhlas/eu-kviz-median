@@ -2,8 +2,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import { questions, choices, voterCategories } from "./data";
-import { RadarGraf } from "./radarGraf";
-import { GrafPreference } from "./grafPreference";
+import { DetailBox } from "./detailBox";
 
 const root = "https://data.irozhlas.cz/eu-kviz-median/";
 const isDesktop = window.innerWidth > 600;
@@ -11,18 +10,6 @@ const isDesktop = window.innerWidth > 600;
 function processRawResults(results) {
   return results.map((el, idx) => [Math.round(el * 100), idx]).sort((a, b) => b[0] - a[0]);
 }
-
-const DetailBox = ({ catId }) => (
-  <div id="detail-box">
-    <div className="detail-box-radary">
-      <RadarGraf catId={catId} graphId={0} />
-      <RadarGraf catId={catId} graphId={1} />
-      <RadarGraf catId={catId} graphId={2} />
-      <RadarGraf catId={catId} graphId={3} />
-    </div>
-    <GrafPreference catId={catId} />
-  </div>
-);
 
 class EuApp extends Component {
   constructor(props) {
@@ -35,12 +22,15 @@ class EuApp extends Component {
       results: undefined,
       shareLink: undefined,
       catId: 0,
+      graphId: 0,
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.sendResults = this.sendResults.bind(this);
     this.FbShare = this.FbShare.bind(this);
     this.TwShare = this.TwShare.bind(this);
+    this.handleCatChange = this.handleCatChange.bind(this);
+    this.handleGraphChange = this.handleGraphChange.bind(this);
   }
 
   sendResults() {
@@ -83,6 +73,14 @@ class EuApp extends Component {
     window.open(`${`https://twitter.com/share?url=${shareLink}`}`, "Sdílení", "width=550,height=450,scrollbars=no");
   }
 
+  handleCatChange(catId) {
+    this.setState({ catId });
+  }
+
+  handleGraphChange(graphId) {
+    this.setState({ graphId });
+  }
+
   handleClick(e) {
     const { question, answers } = this.state;
 
@@ -99,7 +97,7 @@ class EuApp extends Component {
 
   render() {
     const {
-      question, done, results, shareLink, catId,
+      question, done, results, shareLink, catId, graphId,
     } = this.state;
 
     return (
@@ -171,7 +169,12 @@ class EuApp extends Component {
             </React.Fragment>
           )}
         </div>
-        <DetailBox catId={catId} />
+        <DetailBox
+          catId={catId}
+          graphId={graphId}
+          onCatChange={this.handleCatChange}
+          onGraphChange={this.handleGraphChange}
+        />
       </React.Fragment>
     );
   }
