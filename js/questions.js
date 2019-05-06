@@ -18,7 +18,7 @@ export const questions = [
   "Myslíte si, že by se mělo o setrvání Česka v EU hlasovat v referendu?",
   "Souhlasíte s tvrzením, že imigranti mohou ohrožovat českou ekonomiku a sociální stát?",
   "Souhlasíte s tvrzením, že EU příliš zasahuje do vnitřních záležitostí ČR. Má příliš velký vliv na českou politiku a omezuje Česko evropskými zákony a regulací?",
-  "Souhlasíte s tvrzením, že obyčejný člověk by v politice reprezentoval mé zájmy lépe nežli profesionální politik?",
+  "Souhlasíte s tvrzením, že obyčejný člověk by v politice reprezentoval vaše zájmy lépe než profesionální politik?",
 ];
 
 const defaultChoices = ["Určitě ano", "Spíše ano", "Nevím", "Spíše ne", "Určitě ne"];
@@ -47,13 +47,13 @@ export const choices = {
 };
 
 export const voterCategories = [
-  "obránce",
-  "rezignovaný pesimista",
-  "městský liberál",
-  "užitkář",
-  "vyloučený",
-  "skeptický reformista",
-  "tuzemský pragmatik",
+  "Obránce",
+  "Rezignovaný pesimista",
+  "Městský liberál",
+  "Užitkář",
+  "Vyloučený",
+  "Skeptický reformista",
+  "Tuzemský pragmatik",
 ];
 
 export default questions;

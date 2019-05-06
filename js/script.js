@@ -3,13 +3,19 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import { questions, choices, voterCategories } from "./questions";
 
+const root = "https://data.irozhlas.cz/eu-kviz-median/";
+
+function processRawResults(results) {
+  return results.map((el, idx) => [Math.round(el * 100), idx]).sort((a, b) => b[0] - a[0]);
+}
+
 class Kviz extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      question: 19,
-      answers: new Array(20).fill(0),
+      question: 0,
+      answers: new Array(20),
       done: false,
       results: null,
     };
@@ -25,7 +31,7 @@ class Kviz extends Component {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
       if (xhr.status === 200) {
-        this.setState({ results: JSON.parse(xhr.responseText) });
+        this.setState({ results: processRawResults(JSON.parse(xhr.responseText)) });
 
         const xhr2 = new XMLHttpRequest();
         xhr2.open("POST", "https://gh250k574a.execute-api.eu-west-1.amazonaws.com/prod");
@@ -57,7 +63,7 @@ class Kviz extends Component {
 
   render() {
     const {
-      question, done, results, answers,
+      question, done, results,
     } = this.state;
 
     return (
@@ -73,14 +79,44 @@ class Kviz extends Component {
                 <button type="button" key={val} className={`btn btn-${arr.length} btn-${arr.length}-${idx + 1}`} value={idx + 1} onClick={this.handleClick}>{val}</button>
               ))}
             </div>
-            { "Odpovědi: " }
-            { String(answers) }
           </div>
         ) : (
           <div>
-            {"Hotovo!"}
-            <br />
-            {`Výsledek: ${results ? results.map((el, idx) => ` ${voterCategories[idx]}: ${el}`) : "Čekejte..."}`}
+            <div id="done">
+              {"Hotovo! Ve vztahu k Evropské unii jste:"}
+            </div>
+            {results
+              ? (
+                <div>
+                  <div id="top-result">
+                    <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]]} />
+                    <div id="top-result-name">
+                      {voterCategories[results[0][1]]}
+                    </div>
+                    <div id="top-result-pct">
+                      {`${String(results[0][0]).replace(".", ",")} %`}
+                    </div>
+                  </div>
+                  <div id="results-categories">
+                    {results.slice(1).map(el => (
+                      <div className="results-category" key={el[1]}>
+                        <img src={`${root}img/${el[1]}.svg`} className="results-img" alt={voterCategories[el[1]]} />
+                        <div className="results-category-name">
+                          {voterCategories[el[1]]}
+                        </div>
+                        <div className="results-category-pct">
+                          {`${String(el[0]).replace(".", ",")} %`}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div id="waiting">
+                  {"Výsledek se načítá..."}
+                </div>
+              )
+              }
           </div>
         )}
       </div>
