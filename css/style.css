@@ -275,6 +275,15 @@ a.btn.disabled, fieldset:disabled a.btn {
   flex-wrap: wrap;
 }
 
+.detail-box-radary {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-box-radary > div {
+  width: 50%;
+}
+
 @media only screen and (max-width: 600px) {
   #kviz {
     padding: 32px 10px;

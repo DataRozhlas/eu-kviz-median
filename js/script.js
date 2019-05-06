@@ -1,7 +1,12 @@
 ﻿/* eslint-disable react/no-danger */
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { questions, choices, voterCategories } from "./questions";
+import { questions, choices, voterCategories } from "./data";
+import { GrafVztah } from "./grafVztah";
+import { GrafPostoje } from "./grafPostoje";
+import { GrafDuvera } from "./grafDuvera";
+import { GrafVliv } from "./grafVliv";
+import { GrafPreference } from "./grafPreference";
 
 const root = "https://data.irozhlas.cz/eu-kviz-median/";
 const isDesktop = window.innerWidth > 600;
@@ -9,6 +14,20 @@ const isDesktop = window.innerWidth > 600;
 function processRawResults(results) {
   return results.map((el, idx) => [Math.round(el * 100), idx]).sort((a, b) => b[0] - a[0]);
 }
+
+const DetailBox = ({ catId }) => (
+  <div id="detail-box">
+    <div className="detail-box-radary">
+      <GrafVztah catId={catId} />
+      <GrafPostoje catId={catId} />
+    </div>
+    <div className="detail-box-radary">
+      <GrafDuvera catId={catId} />
+      <GrafVliv catId={catId} />
+    </div>
+    <GrafPreference catId={catId} />
+  </div>
+);
 
 class EuApp extends Component {
   constructor(props) {
@@ -20,6 +39,7 @@ class EuApp extends Component {
       done: false,
       results: undefined,
       shareLink: undefined,
+      catId: 0,
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -35,20 +55,27 @@ class EuApp extends Component {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
       if (xhr.status === 200) {
-        this.setState({ results: processRawResults(JSON.parse(xhr.responseText)) });
+        const results = processRawResults(JSON.parse(xhr.responseText));
+        this.setState({ results, catId: results[0][1] });
 
         const xhr2 = new XMLHttpRequest();
         xhr2.open("POST", "https://gh250k574a.execute-api.eu-west-1.amazonaws.com/prod");
         xhr2.setRequestHeader("Content-Type", "application/json");
         xhr2.onload = () => {
           if (xhr2.status === 200) {
-            this.setState({ shareLink: xhr2.responseText.substring(1, xhr2.responseText.length - 1) });
+            this.setState({
+              shareLink: xhr2.responseText.substring(1, xhr2.responseText.length - 1),
+            });
           }
         };
         xhr2.send(xhr.responseText);
       }
     };
     xhr.send(JSON.stringify(answers));
+  }
+
+  loadGraphs(catId) {
+    this.setState({ catId });
   }
 
   FbShare() {
@@ -77,7 +104,7 @@ class EuApp extends Component {
 
   render() {
     const {
-      question, done, results, shareLink,
+      question, done, results, shareLink, catId,
     } = this.state;
 
     return (
@@ -103,7 +130,7 @@ class EuApp extends Component {
               {results
                 ? (
                   <React.Fragment>
-                    <div id="top-result">
+                    <div id="top-result" onClick={() => this.loadGraphs(results[0][1])}>
                       <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]]} />
                       <div id="top-result-name">
                         {voterCategories[results[0][1]]}
@@ -114,7 +141,7 @@ class EuApp extends Component {
                     </div>
                     <div id="results-categories">
                       {results.slice(1).map(el => (
-                        <div className="results-category" key={el[1]}>
+                        <div className="results-category" key={el[1]} onClick={() => this.loadGraphs(el[1])}>
                           <img src={`${root}img/${el[1]}.svg`} className="results-img" alt={voterCategories[el[1]]} />
                           <div className="results-category-name">
                             {voterCategories[el[1]]}
@@ -149,9 +176,7 @@ class EuApp extends Component {
             </React.Fragment>
           )}
         </div>
-        <div id="category-box">
-          {"Já jsem boxík jéjéjé"}
-        </div>
+        <DetailBox catId={catId} />
       </React.Fragment>
     );
   }
