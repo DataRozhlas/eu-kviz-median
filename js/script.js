@@ -1,13 +1,14 @@
-﻿import React, { Component } from "react";
+﻿/* eslint-disable react/no-danger */
+import React, { Component } from "react";
 import { render } from "react-dom";
-import { questions, choices } from "./questions";
+import { questions, choices, voterCategories } from "./questions";
 
 class Kviz extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      question: 0,
+      question: 19,
       answers: new Array(20).fill(0),
       done: false,
       results: null,
@@ -24,10 +25,17 @@ class Kviz extends Component {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = () => {
       if (xhr.status === 200) {
-        this.setState({
-          results: JSON.parse(xhr.responseText),
-        });
-        console.log(xhr.responseText);
+        this.setState({ results: JSON.parse(xhr.responseText) });
+
+        const xhr2 = new XMLHttpRequest();
+        xhr2.open("POST", "https://gh250k574a.execute-api.eu-west-1.amazonaws.com/prod");
+        xhr2.setRequestHeader("Content-Type", "application/json");
+        xhr2.onload = () => {
+          if (xhr2.status === 200) {
+            console.log(xhr2.responseText);
+          }
+        };
+        xhr2.send(xhr.responseText);
       }
     };
     xhr.send(JSON.stringify(answers));
@@ -49,33 +57,30 @@ class Kviz extends Component {
 
   render() {
     const {
-      question, answers, done, results,
+      question, done, results, answers,
     } = this.state;
 
     return (
       <div>
-        <b>{`Odpovědi: ${answers}`}</b>
-        <br />
         {!done ? (
-          <div id="choices">
-            {`Otázka: ${questions[question]}`}
-            {
-          choices[question].map((val, idx)=> {
-            return (
-              //<br /><button type="button" value={idx} onClick={this.handleClick}>{val}</button>
-              <div className="buttonek">
-                <button type="button" value={val[1]} onClick={this.handleClick}>{val[0]}</button>
-              </div>
-            )
-          })
-          }
-  
+          <div>
+            <div id="question-header">
+              {`Otázka ${question + 1} z 20`}
+            </div>
+            <div id="question-text" dangerouslySetInnerHTML={{ __html: questions[question] }} />
+            <div id={`question-buttons-${choices[question].length}`}>
+              {choices[question].map((val, idx, arr) => (
+                <button type="button" key={val} className={`btn btn-${arr.length} btn-${arr.length}-${idx + 1}`} value={idx + 1} onClick={this.handleClick}>{val}</button>
+              ))}
+            </div>
+            { "Odpovědi: " }
+            { String(answers) }
           </div>
         ) : (
           <div>
             {"Hotovo!"}
             <br />
-            {`Výsledek: ${results || "Čekejte..."}`}
+            {`Výsledek: ${results ? results.map((el, idx) => ` ${voterCategories[idx]}: ${el}`) : "Čekejte..."}`}
           </div>
         )}
       </div>

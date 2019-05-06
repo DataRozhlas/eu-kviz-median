@@ -12,22 +12,16 @@ export const questions = [
   "Členství v EU může přinášet různé výhody nebo omezení. Platí pro vás osobně, že díky členství v EU máte větší šance najít si práci?",
   "Souhlasíte s tvrzením, že EU nutí Českou republiku přijímat zbytečné a neefektivní zákony?",
   "Někteří lidé považují členství Česka v Evropské unii za prospěšné, jiní za škodlivé. Souhlasíte s tvrzením, že členství v EU je prospěšné pro život v Česku za 20 let?",
-  "Lidé se zajímají o různá témata společnosti. A co Vy? Je pro vás důležité téma fungování Evropské unie a její vliv na Česko?",
-  "V politice lidé někdy hovoří o pravici a levici. Kam byste se sám/sama zařadil(a) na této stupnici?",
+  "Jak důležité pro vás je téma fungování Evropské unie a její vliv na Česko?<br><small>(0 = nedůležité, 10 = důležité)</small>",
+  "V politice lidé někdy hovoří o pravici a levici. Kam byste se sám/sama zařadil(a) na této stupnici?<br><small>(0 = levice, 11 = pravice)</small>",
   "Souhlasíte s tvrzením, že silný vůdce je důležitý pro Českou republiku, i když nebude vždy jednat v souladu se zavedenými pravidly?",
   "Myslíte si, že by se mělo o setrvání Česka v EU hlasovat v referendu?",
   "Souhlasíte s tvrzením, že imigranti mohou ohrožovat českou ekonomiku a sociální stát?",
   "Souhlasíte s tvrzením, že EU příliš zasahuje do vnitřních záležitostí ČR. Má příliš velký vliv na českou politiku a omezuje Česko evropskými zákony a regulací?",
-  "Souhlasíte s tvrzením, že obyčejný člověk by v politice reprezentoval mé zájmy lépe nežli profesionální politik?"
+  "Souhlasíte s tvrzením, že obyčejný člověk by v politice reprezentoval mé zájmy lépe nežli profesionální politik?",
 ];
 
-const defaultChoices = [
-  ["Určitě ano", 1],
-  ["Spíše ano", 2],
-  ["Nevím", 3],
-  ["Spíše ne", 4],
-  ["Určitě ne", 5],
-];
+const defaultChoices = ["Určitě ano", "Spíše ano", "Nevím", "Spíše ne", "Určitě ne"];
 
 export const choices = {
   0: defaultChoices,
@@ -43,37 +37,23 @@ export const choices = {
   10: defaultChoices,
   11: defaultChoices,
   12: defaultChoices,
-  13: [
-    ["Serepes", 1],
-    ["Cožeto?", 3],
-    ["Moc mě to nebere", 4],
-    ["Spíš nic", 5],
-    ["Eeech", 6],
-    ["Možná trochu?", 7],
-    ["Čtu Respekt", 8],
-    ["Asi mě to zajímá", 9],
-    ["Dost mě to zajímá", 10],
-    ["Nezajímam se o nic jinýho", 11],
-  ],
-  14: [
-    ["Mao", 1],
-    ["Míša", 2],
-    ["Trocký", 3],
-    ["Žižek", 4],
-    ["Stropáč", 5],
-    ["Bursík", 6],
-    ["Lolobrádek", 7],
-    ["Kradousek", 8],
-    ["Topol", 9],
-    ["Klaus", 10],
-    ["Rees-Mogg", 11],
-    ["Nevím", 12],
-  ],
+  13: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  14: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   15: defaultChoices,
   16: defaultChoices,
   17: defaultChoices,
   18: defaultChoices,
   19: defaultChoices,
 };
+
+export const voterCategories = [
+  "obránce",
+  "rezignovaný pesimista",
+  "městský liberál",
+  "užitkář",
+  "vyloučený",
+  "skeptický reformista",
+  "tuzemský pragmatik",
+];
 
 export default questions;
