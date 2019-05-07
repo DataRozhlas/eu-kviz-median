@@ -103,4 +103,10 @@ export const graphMeta = [
   ],
 ];
 
+export const calcData = [
+  ["Strach z imigrace", 5],
+  ["Profit z globalizace", 5],
+  ["Sledování komerčních TV a alternativních médií", 5],
+];
+
 export default questions;

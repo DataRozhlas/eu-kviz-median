@@ -17,7 +17,7 @@ class EuApp extends Component {
     super(props);
 
     this.state = {
-      question: 19,
+      question: 0,
       answers: new Array(20).fill(1),
       done: false,
       results: undefined,
