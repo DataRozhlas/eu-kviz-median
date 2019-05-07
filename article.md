@@ -12,6 +12,4 @@ Text text
 
 <div id="eu-app-box"></div>
 
-Text text
-
 <div id="eu-secondary-app"></div>

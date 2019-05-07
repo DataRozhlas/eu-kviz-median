@@ -1,4 +1,6 @@
 /* eslint-disable max-len */
+export const root = "https://data.irozhlas.cz/eu-kviz-median/";
+
 export const questions = [
   "Někteří lidé považují členství Česka v Evropské unii za prospěšné, jiní za škodlivé. Je podle Vás členství prospěšné pro Česko jako celek?",
   "Souhlasíte, aby byla za měnu České republiky přijata společná evropská měna?",
@@ -48,13 +50,13 @@ export const choices = {
 };
 
 export const voterCategories = [
-  "Obránce",
-  "Protisystémový pesimista",
-  "Městský liberál",
-  "Profitář",
-  "Vyloučený",
-  "Skeptický reformista",
-  "Dočasný pragmatik",
+  ["Obránce", "17 %", "Specificky protievropský a protiglobalizační bojovník. Politicky velmi aktivní. Netrpí chudobou."],
+  ["Protisystémový pesimista", "8 %", "Pasivní a naštvaný autoritář s nízkými kapitály. Nedůvěřuje institucím – národním, ani evropským."],
+  ["Městský liberál", "12 %", "Kavárník s vysokými kapitály. Má velmi liberální a prozápadní postoje. Vnímá prospěch z globalizace."],
+  ["Profitář", "18 %", "Mladší populista. Z členství v unii má osobní prospěch, ale příliš jí nedůvěřuje. Nechce euro."],
+  ["Vyloučený", "16 %", "Solidární chudí, často samoživitelky. Nejsou protievropští ani autoritářští. Politika je nezajímá."],
+  ["Skeptický reformista", "18 %", "Mladší a vzdělanější skeptik s vysokými kapitály. Je proevropský, ale nedůvěřuje fungování unie."],
+  ["Dočasný pragmatik", "11 %", "Starší, středoškolsky vzdělaný pragmatik. Vnímá současný prospěch členství, ale v budoucnu vidí spíš nevýhody."],
 ];
 
 // 0 = all, then by voterCategories, ie id+1

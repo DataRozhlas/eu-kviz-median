@@ -1,11 +1,14 @@
 ﻿/* eslint-disable react/no-danger */
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { questions, choices, voterCategories } from "./data";
+import {
+  questions, choices, voterCategories, root,
+} from "./data";
+import { CatDetail } from "./catDetail"
 import { DetailBox } from "./detailBox";
 import "./secondary";
 
-const root = "https://data.irozhlas.cz/eu-kviz-median/";
+
 const isDesktop = window.innerWidth > 600;
 
 function processRawResults(results) {
@@ -75,7 +78,7 @@ class EuApp extends Component {
   }
 
   handleCatChange(e) {
-    this.setState({ catId: e.target.value });
+    this.setState({ catId: (typeof e === "number") ? e : e.target.value });
   }
 
   handleGraphChange(e) {
@@ -124,10 +127,10 @@ class EuApp extends Component {
               {results
                 ? (
                   <>
-                    <div id="top-result" role="button" tabIndex={0} onClick={() => this.loadGraphs(results[0][1])}>
-                      <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]]} />
+                    <div id="top-result" role="button" tabIndex={0}>
+                      <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]][0]} />
                       <div id="top-result-name">
-                        {voterCategories[results[0][1]]}
+                        {voterCategories[results[0][1]][0]}
                       </div>
                       <div id="top-result-pct">
                         {`${String(results[0][0]).replace(".", ",")} %`}
@@ -135,10 +138,10 @@ class EuApp extends Component {
                     </div>
                     <div id="results-categories">
                       {results.slice(1).map(el => (
-                        <div className="results-category" role="button" tabIndex={0} key={el[1]} onClick={() => this.loadGraphs(el[1])}>
-                          <img src={`${root}img/${el[1]}.svg`} className="results-img" alt={voterCategories[el[1]]} />
+                        <div className="results-category" role="button" tabIndex={0} key={el[1]}>
+                          <img src={`${root}img/${el[1]}.svg`} className="results-img" alt={voterCategories[el[1]][0]} />
                           <div className="results-category-name">
-                            {voterCategories[el[1]]}
+                            {voterCategories[el[1]][0]}
                           </div>
                           <div className="results-category-pct">
                             {`${String(el[0]).replace(".", ",")} %`}
@@ -170,10 +173,10 @@ class EuApp extends Component {
             </>
           )}
         </div>
+        <CatDetail catId={catId} handleCatChange={this.handleCatChange} />
         <DetailBox
           catId={catId}
           graphId={graphId}
-          handleCatChange={this.handleCatChange}
           handleGraphChange={this.handleGraphChange}
         />
       </>

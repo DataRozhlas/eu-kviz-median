@@ -1,4 +1,4 @@
-#eu-app, #eu-secondary-app {
+#eu-app, #eu-secondary-app, #detail-box {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -283,6 +283,67 @@ a.btn.disabled, fieldset:disabled a.btn {
   justify-content: space-around;
 }
 
+#cat-detail {
+  display: flex;
+  background-color: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#cat-detail-picbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#cat-detail-pct {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#cat-detail-pct-number {
+  font-size: 35px;
+  text-align: center;
+}
+
+#cat-detail-pct-text {
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+}
+
+#cat-detail-info {
+  align-self: center;
+  padding-left: 30px;
+  padding-right: 25px;
+}
+
+#cat-switch {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px; 
+  flex-wrap: wrap;  
+}
+
+.cat-switch-picbox {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: small;
+  width: 10%;
+  text-align: center;
+  align-items: center;
+}
+
+.cat-switch-img {
+  width: 50px;
+}
+
+.cat-switch-name-selected {
+  font-weight: bold;
+}
+
 .graph-btn {
   text-align: center;
   border: 1px solid #dcdcdc;
@@ -335,5 +396,22 @@ a.btn.disabled, fieldset:disabled a.btn {
 
   .results-category-name {
     font-size: 13px;
+  }
+
+  #cat-detail {
+    flex-wrap: wrap;
+  }
+
+  #cat-detail-picbox {
+    width: 50%;
+    align-items: center;
+  }
+
+  #cat-detail-pct {
+    width: 50%;
+  }
+
+  .cat-switch-picbox {
+    width: 30%;
   }
 }

@@ -62,7 +62,7 @@ export const RadarGraf = ({ catId, graphId }) => (
         },
       },
       series: [{
-        name: voterCategories[catId],
+        name: voterCategories[catId][0],
         id: "obr",
         data: graphData[Number(catId) + 1]
           .slice(graphMeta[graphId][2][0], graphMeta[graphId][2][1]),
