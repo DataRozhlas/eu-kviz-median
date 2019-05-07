@@ -4,9 +4,9 @@ import Slider from "rc-slider/lib/Slider";
 import { calcData, calcResults } from "./data";
 import "rc-slider/assets/index.css";
 
-function genMarks(max) {
+function genMarks(max, markNames) {
   const marks = {};
-  for (let i = 1; i <= max; i += 1) marks[i] = String(i);
+  [marks[1], marks[max]] = markNames;
   return marks;
 }
 
@@ -29,14 +29,15 @@ function recountValues(values) {
 }
 
 const CalcSlider = ({
-  name, max, sliderMove, value,
+  name, max, sliderMove, value, markNames, tooltip,
 }) => (
   <>
-    <div className="calc-name">{name}</div>
+    <div className="calc-name"><span title={tooltip} className={tooltip && "calc-name-tooltiped"}>{name}</span></div>
     <Slider
+      dots
       min={1}
       max={max}
-      marks={genMarks(max)}
+      marks={genMarks(max, markNames)}
       className="calc-slider"
       onChange={e => sliderMove(e)}
       value={value}
@@ -70,8 +71,10 @@ class SecondaryApp extends Component {
               key={el[0]}
               name={el[0]}
               max={el[1]}
+              markNames={el[2]}
               sliderMove={e => this.sliderMove(e, idx)}
               value={sliderValues[idx]}
+              tooltip={el[3] || undefined}
             />
           ))}
         </div>

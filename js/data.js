@@ -106,13 +106,13 @@ export const graphMeta = [
 ];
 
 export const calcData = [
-  ["Strach z imigrace", 5],
-  ["Pociťovaný profit z globalizace", 5],
-  ["Komerční TV a alternativa", 5],
-  ["Příjem", 2],
-  ["Majetek", 2],
-  ["Kvalita života v obci bydliště", 3],
-  ["Kulturní kapitál", 2],
+  ["Strach z imigrace", 5, ["malý", "velký"]],
+  ["Pociťovaný profit z globalizace", 5, ["tratí", "vydělává"]],
+  ["Komerční TV a alternativa", 5, ["komerce", "alternativa"]],
+  ["Příjem", 2, ["nízký", "vysoký"]],
+  ["Majetek", 2, ["malý", "velký"]],
+  ["Kvalita života v obci bydliště", 3, ["nízká", "vysoká"], "Vychází z 13 ukazatelů o obci, kde respondent bydlí. Mimo jiné nezaměstnanost, exekuce, dostupnost zdravotnictví a školství, kriminalita, kvalita ovzduší, apod."],
+  ["Kulturní kapitál", 2, ["nízký", "vysoký"], "Souvisí s orientací a adaptabilitou v moderní společnosti. Určujeme ze vzdělání respondenta, počtu knih v domácnosti, znalosti cizích jazyků a ICT."],
 ];
 
 function rd(val) {
