@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import { questions, choices, voterCategories } from "./data";
 import { DetailBox } from "./detailBox";
+import "./secondary";
 
 const root = "https://data.irozhlas.cz/eu-kviz-median/";
 const isDesktop = window.innerWidth > 600;
@@ -73,12 +74,12 @@ class EuApp extends Component {
     window.open(`${`https://twitter.com/share?url=${shareLink}`}`, "Sdílení", "width=550,height=450,scrollbars=no");
   }
 
-  handleCatChange(catId) {
-    this.setState({ catId });
+  handleCatChange(e) {
+    this.setState({ catId: e.target.value });
   }
 
-  handleGraphChange(graphId) {
-    this.setState({ graphId });
+  handleGraphChange(e) {
+    this.setState({ graphId: e.target.value });
   }
 
   handleClick(e) {
@@ -101,10 +102,10 @@ class EuApp extends Component {
     } = this.state;
 
     return (
-      <React.Fragment>
+      <>
         <div id="kviz">
           {!done ? (
-            <React.Fragment>
+            <>
               <div id="question-header">
                 {`Otázka ${question + 1} z 20`}
               </div>
@@ -114,16 +115,16 @@ class EuApp extends Component {
                   <button type="button" key={val} className={`btn btn-${arr.length} btn-${arr.length}-${idx + 1}`} value={idx + 1} onClick={this.handleClick}>{val}</button>
                 ))}
               </div>
-            </React.Fragment>
+            </>
           ) : (
-            <React.Fragment>
+            <>
               <div id="done">
                 {"Hotovo! Ve vztahu k Evropské unii jste:"}
               </div>
               {results
                 ? (
-                  <React.Fragment>
-                    <div id="top-result" onClick={() => this.loadGraphs(results[0][1])}>
+                  <>
+                    <div id="top-result" role="button" tabIndex={0} onClick={() => this.loadGraphs(results[0][1])}>
                       <img src={`${root}img/${results[0][1]}.svg`} id="top-result-img" alt={voterCategories[results[0][1]]} />
                       <div id="top-result-name">
                         {voterCategories[results[0][1]]}
@@ -134,7 +135,7 @@ class EuApp extends Component {
                     </div>
                     <div id="results-categories">
                       {results.slice(1).map(el => (
-                        <div className="results-category" key={el[1]} onClick={() => this.loadGraphs(el[1])}>
+                        <div className="results-category" role="button" tabIndex={0} key={el[1]} onClick={() => this.loadGraphs(el[1])}>
                           <img src={`${root}img/${el[1]}.svg`} className="results-img" alt={voterCategories[el[1]]} />
                           <div className="results-category-name">
                             {voterCategories[el[1]]}
@@ -148,34 +149,34 @@ class EuApp extends Component {
                     <div id="results-share">
                       {isDesktop
                         ? (
-                          <React.Fragment>
+                          <>
                             <button className="btn btn-primary" type="submit" onClick={this.FbShare} disabled={shareLink ? null : true}>Sdílet na Facebooku</button>
                             <button className="btn btn-primary" type="submit" onClick={this.TwShare} disabled={shareLink ? null : true}>Sdílet na Twitteru</button>
-                          </React.Fragment>
+                          </>
                         ) : (
-                          <React.Fragment>
+                          <>
                             <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareLink}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-primary" type="submit" disabled={shareLink ? null : true}>Sdílet na Facebooku</button></a>
                             <a href={`https://twitter.com/share?url=${shareLink}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-primary" type="submit" disabled={shareLink ? null : true}>Sdílet na Twitteru</button></a>
-                          </React.Fragment>
+                          </>
                         )}
                     </div>
-                  </React.Fragment>
+                  </>
                 ) : (
                   <div id="waiting">
                     {"Výsledek se načítá..."}
                   </div>
                 )
                 }
-            </React.Fragment>
+            </>
           )}
         </div>
         <DetailBox
           catId={catId}
           graphId={graphId}
-          onCatChange={this.handleCatChange}
-          onGraphChange={this.handleGraphChange}
+          handleCatChange={this.handleCatChange}
+          handleGraphChange={this.handleGraphChange}
         />
-      </React.Fragment>
+      </>
     );
   }
 }
