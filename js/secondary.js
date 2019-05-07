@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import Slider from "rc-slider/lib/Slider";
-import { calcData } from "./data";
+import { calcData, calcResults } from "./data";
 import "rc-slider/assets/index.css";
 
 function genMarks(max) {
@@ -10,18 +10,22 @@ function genMarks(max) {
   return marks;
 }
 
-function calcResults(values, variable) {
-  console.log(values, variable)
-  switch (variable) {
-    case 0:
-      return 1 / (1 + Math.exp(-0.27 + -0.61 * values[0] + 0.57 * values[1] + -0.13 * values[2] + -0.12 * values[3] + -0.16 * values[4] + 0.29 * values[5] + 0.13 * values[6] + -0.15 * values[7] + 0.12 * values[8]));
-    case 1:
-      return 1 / (1 + Math.exp(0.90 + -0.48 * values[0] + 0.31 * values[1] + -0.09 * values[2] + 0.08 * values[3] + -0.01 * values[4] + 0.08 * values[5] + 0.48 * values[6] + -0.08 * values[7] + -0.12 * values[8]));
-    case 2:
-      return 1 / (1 + Math.exp(3.45 + -0.73 * values[0] + 0.70 * values[1] + -0.24 * values[2] + -0.08 * values[3] + -0.07 * values[4] + -0.05 * values[5] + 0.20 * values[6] + -0.11 * values[7] + -0.23 * values[8]))
-    default:
-      return 0;
-  }
+function recountValues(values) {
+  /*
+    prepocet slajditek prijmu a majetku
+    1 Vysoký příjem a velký majetek
+    2 Vysoký příjem a malý majetek
+    3 Nízký příjem a velký majetek
+    4 Nízký příjem a malý majetek
+  */
+  let povVal;
+  if (values[3] === 2 && values[4] === 2) povVal = 1;
+  else if (values[3] === 2 && values[4] === 1) povVal = 2;
+  else if (values[3] === 1 && values[4] === 2) povVal = 3;
+  else if (values[3] === 1 && values[4] === 1) povVal = 4;
+
+  const newValues = values.slice(0, 3).concat([povVal]).concat(values.slice(5));
+  return newValues;
 }
 
 const CalcSlider = ({
@@ -56,6 +60,7 @@ class SecondaryApp extends Component {
 
   render() {
     const { sliderValues } = this.state;
+    const recountedValues = recountValues(sliderValues);
 
     return (
       <>
@@ -71,14 +76,12 @@ class SecondaryApp extends Component {
           ))}
         </div>
         <div id="calc-results">
-          <div>
-            <div>Spokojenost s fungováním v EU</div>
-            <div>{calcResults(sliderValues, 0)}</div>
-          </div>
-          <div>
-            <div>Referendum</div>
-            <div>{calcResults(sliderValues, 2)}</div>
-          </div>
+          {calcResults.map(el => (
+            <div key={el[0]}>
+              <div>{el[0]}</div>
+              <div>{el[1](recountedValues)}</div>
+            </div>
+          ))}
         </div>
       </>
     );
