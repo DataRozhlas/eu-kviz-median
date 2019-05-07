@@ -18,7 +18,7 @@ class EuApp extends Component {
 
     this.state = {
       question: 0,
-      answers: new Array(20).fill(1),
+      answers: new Array(20),
       done: false,
       results: undefined,
       shareLink: undefined,

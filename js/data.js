@@ -107,6 +107,12 @@ export const calcData = [
   ["Strach z imigrace", 5],
   ["Profit z globalizace", 5],
   ["Sledování komerčních TV a alternativních médií", 5],
+  ["Chudoba", 4],
+  ["Sociální kapitál", 5],
+  ["Kvalita života", 3],
+  ["Kulturní kapitál", 2],
+  ["Tradiční hodnoty", 5],
+  ["Moc lidem × politikům", 5],
 ];
 
 export default questions;
