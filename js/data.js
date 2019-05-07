@@ -108,7 +108,7 @@ export const graphMeta = [
 export const calcData = [
   ["Strach z imigrace", 5, ["malý", "velký"]],
   ["Pociťovaný profit z globalizace", 5, ["tratí", "vydělává"]],
-  ["Komerční TV a alternativa", 5, ["komerce", "alternativa"]],
+  ["Konzumace komerční TV a alternativních médií", 5, ["malá", "velká"]],
   ["Příjem", 2, ["nízký", "vysoký"]],
   ["Majetek", 2, ["malý", "velký"]],
   ["Kvalita života v obci bydliště", 3, ["nízká", "vysoká"], "Vychází z 13 ukazatelů o obci, kde respondent bydlí. Mimo jiné nezaměstnanost, exekuce, dostupnost zdravotnictví a školství, kriminalita, kvalita ovzduší, apod."],
