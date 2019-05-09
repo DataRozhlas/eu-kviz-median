@@ -122,27 +122,27 @@ function rd(val) {
 export const calcResults = [
   [
     "Spokojenost s fungováním EU",
-    values => rd(1 - (1 / (1 + Math.exp(0.36 + -0.61 * values[0] + 0.56 * values[1] + -0.1 * values[2] + -0.13 * values[3] + 0.28 * values[4] + 0.01 * values[5])))),
+    values => rd(1 / (1 + Math.exp(-((-0.36 * 1) + (-0.61 * values[0]) + (0.56 * values[1]) + (-0.10 * values[2]) + (-0.13 * values[3]) + (0.28 * values[4]) + (0.01 * values[5]))))),
   ],
   [
     "Osobní prospěšnost členství v EU",
-    values => rd(1 - (1 / (1 + Math.exp(-1.34 + -1.02 * values[0] + 1.01 * values[1] + -0.28 * values[2] + 0.1 * values[3] + 0.25 * values[4] + 0.23 * values[5])))),
+    values => rd(1 / (1 + Math.exp(-((1.34 * 1) + (-1.02 * values[0]) + (1.01 * values[1]) + (-0.28 * values[2]) + (0.1 * values[3]) + (0.25 * values[4]) + (0.23 * values[5]))))),
   ],
   [
     "Prospěšnost členství pro Česko",
-    values => rd(1 - (1 / (1 + Math.exp(-1.55 + -0.64 * values[0] + 0.58 * values[1] + -0.3 * values[2] + -0.06 * values[3] + 0.26 * values[4] + 0.18 * values[5])))),
+    values => rd(1 / (1 + Math.exp(-((1.55 * 1) + (-0.64 * values[0]) + (0.58 * values[1]) + (-0.30 * values[2]) + (-0.06 * values[3]) + (0.26 * values[4]) + (0.18 * values[5]))))),
   ],
   [
     "Prospěšnost členství pro Česko za 20 let",
-    values => rd(1 - (1 / (1 + Math.exp(-0.66 + -0.66 * values[0] + 0.83 * values[1] + -0.33 * values[2] + -0.09 * values[3] + 0.12 * values[4] + 0.26 * values[5])))),
+    values => rd(1 / (1 + Math.exp(-((0.65 * 1) + (-0.66 * values[0]) + (0.83 * values[1]) + (-0.33 * values[2]) + (-0.1 * values[3]) + (0.12 * values[4]) + (0.26 * values[5]))))),
   ],
   [
     "Pro přijetí eura",
-    values => rd(1 - (1 / (1 + Math.exp(1.59 + -0.55 * values[0] + 0.35 * values[1] + -0.1 * values[2] + 0.09 * values[3] + 0.07 * values[4] + 0.52 * values[5])))),
+    values => rd(1 / (1 + Math.exp(-((-1.60 * 1) + (-0.54 * values[0]) + (0.35 * values[1]) + (-0.10 * values[2]) + (0.09 * values[3]) + (0.07 * values[4]) + (0.52 * values[5]))))),
   ],
   [
     "Pro setrvání v EU v referendu",
-    values => rd(1 - (1 / (1 + Math.exp(-2.13 + -0.8 * values[0] + 0.72 * values[1] + -0.26 * values[2] + -0.07 * values[3] + -0.04 * values[4] + 0.22 * values[5])))),
+    values => rd(1 / (1 + Math.exp(-((2.13 * 1) + (-0.8 * values[0]) + (0.72 * values[1]) + (-0.26 * values[2]) + (-0.07 * values[3]) + (-0.04 * values[4]) + (0.22 * values[5]))))),
   ],
 ];
 

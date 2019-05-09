@@ -22,7 +22,7 @@ export const GrafPreference = ({ catId }) => (
           title: {
             text: "",
           },
-          categories: ["ANO", "ČSSD", "KSČM", "ODS", "TOP 09", "SPD", "Piráti", "KDU-ČSL", "STAN", "Jiná", "Neví"],
+          categories: ["ANO", "ČSSD", "KSČM", "ODS", "TOP 09", "SPD", "Piráti", "KDU-ČSL", "STAN", "Jiná", "Neví/nevolí"],
         },
         yAxis: {
           title: {
