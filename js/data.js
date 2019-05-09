@@ -8,7 +8,7 @@ export const questions = [
   "Souhlasíte s tím, že členství Česka v EU vede k <b>lepšímu právnímu státu</b> (lepší zákony, vymahatelnost práva, spravedlivost soudů, apod.)?",
   "Souhlasíte s tím, že členství Česka v EU vede k <b>lepšímu stavu politiky v ČR</b> (méně korupce, lepší politická kultura, apod.)?",
   "Souhlasíte s tím, že členství Česka v EU vede k <b>přibližování mezd západním zemím?</b>",
-  "Souhlasíte s tím, že členství Česka v EU vede k <b>vyššímu růst české ekonomiky?</b>",
+  "Souhlasíte s tím, že členství Česka v EU vede k <b>vyššímu růstu české ekonomiky?</b>",
   "Které výhody členství v Evropské unii platí pro Vás osobně? Díky Evropské unii <b>mám větší šance najít si práci?</b>",
   "Do jaké míry je pro vás téma fungování EU a její vliv na Česko důležité?<br><small>(0 = nedůležité, 10 = důležité)</small>",
   "Myslíte si, že by se mělo o setrvání Česka v EU hlasovat v referendu?",

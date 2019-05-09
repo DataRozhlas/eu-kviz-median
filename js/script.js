@@ -112,7 +112,9 @@ class EuApp extends Component {
               <div id="question-header">
                 {`Otázka ${question + 1} z 20`}
               </div>
-              <div id="question-text" dangerouslySetInnerHTML={{ __html: questions[question] }} />
+              <div id="question-text">
+                <div dangerouslySetInnerHTML={{ __html: questions[question] }} />
+              </div>
               <div id={`question-buttons-${choices[question].length}`}>
                 {choices[question].map((val, idx, arr) => (
                   <button type="button" key={val} className={`btn btn-${arr.length} btn-${arr.length}-${idx + 1}`} value={idx + 1} onClick={this.handleClick}>{val}</button>
