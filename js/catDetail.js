@@ -22,10 +22,10 @@ export const CatDetail = ({
       {voterCategories.map((el, idx) => {
         const nameClass = (catId === idx) ? "cat-switch-name cat-switch-name-selected" : "cat-switch-name"
         return (
-        <div className="cat-switch-picbox" role="button" tabIndex={0} key={el[0]} onClick={() => handleCatChange(idx)}>
-          <img src={`${root}img/${idx}.svg`} alt={el[0]} className="cat-switch-img" />
-          <div className={nameClass}>{el[0]}</div>
-        </div>
+          <div className="cat-switch-picbox" role="button" tabIndex={0} key={el[0]} onClick={() => handleCatChange(idx)}>
+            <img src={`${root}img/${idx}.svg`} alt={el[0]} className="cat-switch-img" />
+            <div className={nameClass}>{el[0]}</div>
+          </div>
         );
       })}
     </div>
