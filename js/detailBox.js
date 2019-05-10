@@ -1,13 +1,15 @@
 import React from "react";
 import { createPortal } from "react-dom";
+import { CatInfo } from "./catInfo";
 import { RadarGraf } from "./radarGraf";
 import { GrafPreference } from "./grafPreference";
 import { graphMeta } from "./data";
 
 export const DetailBox = ({
-  catId, graphId, handleGraphChange,
+  catId, graphId, handleGraphChange, handleCatChange,
 }) => createPortal((
   <div id="detail-box">
+    <CatInfo catId={catId} handleCatChange={handleCatChange} />
     <RadarGraf catId={catId} graphId={graphId} />
     <div id="radar-switch">
       {

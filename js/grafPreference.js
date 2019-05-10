@@ -34,10 +34,6 @@ export const GrafPreference = ({ catId }) => {
           },
           labels: {
             formatter() {
-              // console.log(catId, Number(catId) + 1);
-              // console.log(graphPrefData);
-              // console.log(graphPrefData[4]);
-              // console.log(graphPrefData[Number(catId) + 1]);
               return `${this.value} %`;
             },
           },
