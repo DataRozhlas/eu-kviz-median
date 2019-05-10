@@ -110,7 +110,6 @@ export const calcData = [
   ["Pociťovaný profit z globalizace", 5, ["tratím", "vydělávám"]],
   ["Konzumace komerční TV a alternativních médií", 5, ["malá", "velká"]],
   ["Příjem", 2, ["nízký", "vysoký"]],
-  ["Majetek", 2, ["malý", "velký"]],
   ["Kvalita života v obci bydliště", 3, ["nízká", "vysoká"], "Vychází z 13 ukazatelů o obci, kde respondent bydlí. Mimo jiné nezaměstnanost, exekuce, dostupnost zdravotnictví a školství, kriminalita, kvalita ovzduší, apod."],
   ["Kulturní kapitál", 2, ["nízký", "vysoký"], "Souvisí s orientací a adaptabilitou v moderní společnosti. Určujeme ze vzdělání respondenta, počtu knih v domácnosti, znalosti cizích jazyků a ICT."],
 ];
@@ -122,27 +121,27 @@ function rd(val) {
 export const calcResults = [
   [
     "Spokojenost s fungováním EU",
-    values => rd(1 / (1 + Math.exp(-((-0.36 * 1) + (-0.61 * values[0]) + (0.56 * values[1]) + (-0.10 * values[2]) + (-0.13 * values[3]) + (0.28 * values[4]) + (0.01 * values[5]))))),
+    values => rd(1 / (1 + Math.exp(-((-0.16 * 1) + (-0.69 * values[0]) + (0.52 * values[1]) + (-0.09 * values[2]) + (-0.15 * (values[3] === 1 ? 2 : 1)) + (0.19 * values[4]) + (0.07 * values[5]))))),
   ],
   [
     "Osobní prospěšnost členství v EU",
-    values => rd(1 / (1 + Math.exp(-((1.34 * 1) + (-1.02 * values[0]) + (1.01 * values[1]) + (-0.28 * values[2]) + (0.1 * values[3]) + (0.25 * values[4]) + (0.23 * values[5]))))),
+    values => rd(1 / (1 + Math.exp(-((1.32 * 1) + (-0.95 * values[0]) + (1.09 * values[1]) + (-0.35 * values[2]) + (-0.06 * (values[3] === 1 ? 2 : 1)) + (0.29 * values[4]) + (0.06 * values[5]))))),
   ],
   [
     "Prospěšnost členství pro Česko",
-    values => rd(1 / (1 + Math.exp(-((1.55 * 1) + (-0.64 * values[0]) + (0.58 * values[1]) + (-0.30 * values[2]) + (-0.06 * values[3]) + (0.26 * values[4]) + (0.18 * values[5]))))),
+    values => rd(1 / (1 + Math.exp(-((2.44 * 1) + (-0.90 * values[0]) + (0.60 * values[1]) + (-0.30 * values[2]) + (0.13 * (values[3] === 1 ? 2 : 1)) + (0.06 * values[4]) + (0.18 * values[5]))))),
   ],
   [
     "Prospěšnost členství pro Česko za 20 let",
-    values => rd(1 / (1 + Math.exp(-((0.65 * 1) + (-0.66 * values[0]) + (0.83 * values[1]) + (-0.33 * values[2]) + (-0.1 * values[3]) + (0.12 * values[4]) + (0.26 * values[5]))))),
+    values => rd(1 / (1 + Math.exp(-((0.28 * 1) + (-0.58 * values[0]) + (0.77 * values[1]) + (-0.32 * values[2]) + (-0.36 * (values[3] === 1 ? 2 : 1)) + (0.15 * values[4]) + (0.27 * values[5]))))),
   ],
   [
     "Pro přijetí eura",
-    values => rd(1 / (1 + Math.exp(-((-1.60 * 1) + (-0.54 * values[0]) + (0.35 * values[1]) + (-0.10 * values[2]) + (0.09 * values[3]) + (0.07 * values[4]) + (0.52 * values[5]))))),
+    values => rd(1 / (1 + Math.exp(-((-0.38 * 1) + (-0.56 * values[0]) + (0.35 * values[1]) + (-0.20 * values[2]) + (-1.15 * (values[3] === 1 ? 2 : 1)) + (-0.24 * values[4]) + (0.44 * values[5]))))),
   ],
   [
     "Pro setrvání v EU v referendu",
-    values => rd(1 / (1 + Math.exp(-((2.13 * 1) + (-0.8 * values[0]) + (0.72 * values[1]) + (-0.26 * values[2]) + (-0.07 * values[3]) + (-0.04 * values[4]) + (0.22 * values[5]))))),
+    values => rd(1 / (1 + Math.exp(-((2.13 * 1) + (-0.81 * values[0]) + (0.71 * values[1]) + (-0.24 * values[2]) + (-0.01 * (values[3] === 1 ? 2 : 1)) + (-0.27 * values[4]) + (0.32 * values[5]))))),
   ],
 ];
 
