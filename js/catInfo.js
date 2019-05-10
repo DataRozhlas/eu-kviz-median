@@ -22,8 +22,8 @@ const CatDetail = ({ catId }) => (
       <div className="results-category-name">{voterCategories[catId][0]}</div>
     </div>
     <div id="cat-detail-pct">
-      <div id="cat-detail-pct-number">{voterCategories[catId][1]}</div>
       <div id="cat-detail-pct-text">Zastoupení v populaci</div>
+      <div id="cat-detail-pct-number">{voterCategories[catId][1]}</div>
     </div>
     <div id="cat-detail-info">
       {voterCategories[catId][2]}
