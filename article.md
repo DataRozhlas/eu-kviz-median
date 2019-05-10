@@ -18,7 +18,7 @@ options: [] #wide, noheader (, nopic)
 
 Sociologové proto vytvořili typologii respondentů a každého zařadili do jedné ze skupin.
 
-„Určité kombinace postojů se typicky vyskytují pohromadě,“ pokračuje Prokop. „Třeba strach z migrantů a obavy z globalizace jdou často ruku v ruce s autoritářstvím požadujícím tvrdou ruku, podporou opuštění unie – _czexitu_ – a odmítáním prospěšnosti členství. Společensky znevýhodnění lidé – z chudých obcí, s menším množstvím kontaktů a bez potřebných kompetencí – zase typicky neřeší unijní politiku, ale vadí jim malý dopad na vlastní život. Našli jsme sedm segmentů, které se dost liší a zároveň pokrývají celé spektrum vnímání EU,“ dodává.
+„Určité kombinace postojů se typicky vyskytují pohromadě,“ doplňuje ho statistik Medianu Jaroslav Horníček. „Třeba strach z migrantů a obavy z globalizace jdou často ruku v ruce s autoritářstvím požadujícím tvrdou ruku, podporou opuštění unie – _czexitu_ – a odmítáním prospěšnosti členství. Společensky znevýhodnění lidé – z chudých obcí, s menším množstvím kontaktů a bez potřebných kompetencí – zase typicky neřeší unijní politiku, ale vadí jim malý dopad na vlastní život. Našli jsme sedm segmentů, které se dost liší a zároveň pokrývají celé spektrum vnímání EU,“ dodává.
 
 Do segmentace vstupovaly vnímané přínosy členství – jak pro sebe, tak pro současné Česko a pro jeho budoucnost –, hodnocení fungování EU i národních institucí, postoje k czexitu a euru nebo vnímání globalizaci a migrace. Vedle postojů rozhodovalo také to, jaké je postavení respondenta ve společnosti, tedy jeho ekonomický, sociální a kulturní kapitál.
 
@@ -65,15 +65,15 @@ Nepřekvapí, že Češi jsou k Evropské unii kritičtí, jen třetina je spoko
 
 Data prozrazují také to, jaké jsou příčiny nedůvěry EU.
 
-„Často říkáme, že vztah k unii závisí na vzdělání, věku, je lepší v Praze a mezi pravicovými voliči,“ vysvětluje statistik Medianu Jaroslav Horníček, spoluautor modelu. „Ale to nejsou důvody, jen souvislosti.“
+„Často říkáme, že vztah k unii závisí na vzdělání, věku, je lepší v Praze a mezi pravicovými voliči,“ vysvětluje sociolog Daniel Prokop. „Ale to nejsou důvody, jen souvislosti.“
 
 V následující vizualizaci můžete sami vysledovat, které proměnné mají největší vliv jak na celkovou spokojenost s unií, tak na podporu eura nebo czexitu. Změnou libovolné hodnoty můžete sledovat, jak se mění celkové postoje při zafixování ostatních proměnných. Výpočet podpory jednotlivých variant vychází ze stejných dat jako předchozí vizualizace.
 
 <div id="eu-secondary-app"></div>
 
-„Model ukazuje, že vztah k unii odráží spíš hodnoty, než třeba výši příjmů,“ vysvětluje data Daniel Prokop. „Překvapil nás nízký vliv neurotismu, tedy pocitu osamění a neschopnosti řešit životní problémy, kterému připisují velkou roli někteří psychologové. Taky se potvrdilo, že v Česku neexistuje klasický konzervatismus. Postoje, které třeba ve Spojených státech korelují – vztah k menšinám, k jiné sexuální orientaci, k roli státu a rodiny, udržování tradic, ke spravedlnosti nebo nerovnosti – u nás nesouvisejí. Hodně s nimi naopak souvisí autoritářství a populismus.“
+„Model ukazuje, že vztah k unii odráží spíš hodnoty, než třeba výši příjmů,“ vysvětluje data Prokop. „Překvapil nás nízký vliv neurotismu, tedy pocitu osamění a neschopnosti řešit životní problémy, kterému připisují velkou roli někteří psychologové. Taky se potvrdilo, že v Česku neexistuje klasický konzervatismus. Postoje, které třeba ve Spojených státech korelují – vztah k menšinám, k jiné sexuální orientaci, k roli státu a rodiny, udržování tradic, ke spravedlnosti nebo nerovnosti – u nás nesouvisejí. Hodně s nimi naopak souvisí autoritářství a populismus.“
 
-„Největšími kritiky EU jsou ti, kteří podle svého názoru prodělávají na globalizaci, bojí se migrace, informace čerpají z komerčních televizí a alternativních médií a mají nízký kulturní a lidský kapitál, určující orientaci ve společnosti a schopnost adaptovat se na změny. Při kombinaci těchto faktorů už ostatní proměnné, jako pravicovost nebo postoje k politice, nehrají roli,“ dodává Horníček.
+Největšími kritiky EU jsou podle výzkumníků ti, kteří podle svého názoru prodělávají na globalizaci, bojí se migrace, informace čerpají z komerčních televizí a alternativních médií a mají nízký kulturní a lidský kapitál, určující orientaci ve společnosti a schopnost adaptovat se na změny. Při kombinaci těchto faktorů už ostatní proměnné, jako pravicovost nebo postoje k politice, nehrají roli.
 
 Například ti, kteří se cítí ohrožení migrací, vidí členství v EU jako prospěšné pouze v 31 procentech, na opačném pólu je to 91 procent. Podobně ti, kteří si myslí, že na globalizaci tratí, vidí prospěch EU ve 38 procentech, subjektivní vítězové globalizace v 82 procentech.
 
