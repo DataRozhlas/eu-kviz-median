@@ -366,6 +366,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 #eu-secondary-app {
   display: flex;
+  justify-content: center;
+  margin: 10px 0;
 }
 
 .calc-slider {
@@ -384,6 +386,10 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .calc-name-tooltiped {
   text-decoration: underline dotted gray;
+}
+
+.calc-results-number {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {
@@ -436,5 +442,13 @@ a.btn.disabled, fieldset:disabled a.btn {
 
   .cat-switch-name {
     font-size: 10px;
+  }
+
+  #eu-secondary-app {
+    font-size: 14px;
+  }
+
+  #calc-sliders {
+    width: 40%;
   }
 }

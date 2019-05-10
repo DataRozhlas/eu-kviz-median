@@ -10,24 +10,6 @@ function genMarks(max, markNames) {
   return marks;
 }
 
-function recountValues(values) {
-  /*
-    prepocet slajditek prijmu a majetku
-    1 Vysoký příjem a velký majetek
-    2 Vysoký příjem a malý majetek
-    3 Nízký příjem a velký majetek
-    4 Nízký příjem a malý majetek
-  */
-  let povVal;
-  if (values[3] === 2 && values[4] === 2) povVal = 1;
-  else if (values[3] === 2 && values[4] === 1) povVal = 2;
-  else if (values[3] === 1 && values[4] === 2) povVal = 3;
-  else if (values[3] === 1 && values[4] === 1) povVal = 4;
-
-  const newValues = values.slice(0, 3).concat([povVal]).concat(values.slice(5));
-  return newValues;
-}
-
 const CalcSlider = ({
   name, max, sliderMove, value, markNames, tooltip,
 }) => (
@@ -61,7 +43,6 @@ class SecondaryApp extends Component {
 
   render() {
     const { sliderValues } = this.state;
-    const recountedValues = recountValues(sliderValues);
 
     return (
       <>
@@ -82,7 +63,7 @@ class SecondaryApp extends Component {
           {calcResults.map(el => (
             <div key={el[0]}>
               <div>{el[0]}</div>
-              <div>{el[1](recountedValues)}</div>
+              <div className="calc-results-number">{el[1](sliderValues)}</div>
             </div>
           ))}
         </div>
