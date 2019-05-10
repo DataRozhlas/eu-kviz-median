@@ -31,7 +31,7 @@ class SecondaryApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sliderValues: new Array(calcData.length).fill(1),
+      sliderValues: [4, 3, 3, 2, 2, 2],
     };
   }
 

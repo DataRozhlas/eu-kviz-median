@@ -109,9 +109,9 @@ export const calcData = [
   ["Strach z imigrace", 5, ["malý", "velký"]],
   ["Lidé jako já na globalizaci", 5, ["tratí", "vydělávají"]],
   ["Konzumace komerční TV a alternativních médií", 5, ["malá", "velká"]],
-  ["Příjem", 2, ["nízký", "vysoký"]],
+  ["Příjem a majetek", 2, ["nízký", "vysoký"]],
   ["Kvalita života v obci bydliště", 3, ["nízká", "vysoká"], "Vychází z 13 ukazatelů o obci, kde respondent bydlí. Mimo jiné nezaměstnanost, exekuce, dostupnost zdravotnictví a školství, kriminalita, kvalita ovzduší, apod."],
-  ["Kulturní kapitál", 2, ["nízký", "vysoký"], "Souvisí s orientací a adaptabilitou v moderní společnosti. Určujeme ze vzdělání respondenta, počtu knih v domácnosti, znalosti cizích jazyků a ICT."],
+  ["Kulturní a lidský kapitál", 2, ["nízký", "vysoký"], "Souvisí s orientací a adaptabilitou v moderní společnosti. Určujeme ze vzdělání respondenta, počtu knih v domácnosti, znalosti cizích jazyků a ICT."],
 ];
 
 function rd(val) {
