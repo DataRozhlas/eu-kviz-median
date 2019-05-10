@@ -283,20 +283,26 @@ a.btn.disabled, fieldset:disabled a.btn {
   justify-content: space-around;
 }
 
+#detail-box {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
 #cat-detail {
   display: flex;
-  background-color: #ddd;
-  padding: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
+  justify-content: space-around;
 }
 
 #cat-detail-picbox {
+  width: 33%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #cat-detail-pct {
-  width: 30%;
+  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -315,8 +321,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 #cat-detail-info {
   align-self: center;
-  padding-left: 30px;
-  padding-right: 25px;
+  width: 33%;
 }
 
 #cat-switch {
@@ -415,7 +420,20 @@ a.btn.disabled, fieldset:disabled a.btn {
     width: 50%;
   }
 
+  #cat-detail-info {
+    width: 100%;
+    font-size: 14px;
+  }
+
   .cat-switch-picbox {
-    width: 30%;
+    width: 25%;
+  }
+
+  .cat-switch-img {
+    width: 30px;
+  }
+
+  .cat-switch-name {
+    font-size: 10px;
   }
 }

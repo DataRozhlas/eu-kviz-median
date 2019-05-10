@@ -4,10 +4,14 @@ import Highcharts from "highcharts/highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { voterCategories, graphPrefData } from "./data";
 
-export const GrafPreference = ({ catId }) => (
-  <HighchartsReact
-    highcharts={Highcharts}
-    options={
+
+export const GrafPreference = ({ catId }) => {
+  // deep copying the data array so the original doesn't get modified (a highcharts bug?)
+  const copiedData = JSON.parse(JSON.stringify(graphPrefData));
+  return (
+    <HighchartsReact
+      highcharts={Highcharts}
+      options={
       {
         chart: {
           type: "column",
@@ -46,16 +50,17 @@ export const GrafPreference = ({ catId }) => (
         },
         series: [{
           name: voterCategories[catId][0],
-          data: graphPrefData[Number(catId) + 1],
+          data: copiedData[Number(catId) + 1],
           color: "#333",
         }, {
           name: "Populace",
-          data: graphPrefData[0],
+          data: copiedData[0],
           color: "#ccc",
         }],
       }
     }
-  />
-);
+    />
+  );
+};
 
 export default GrafPreference;

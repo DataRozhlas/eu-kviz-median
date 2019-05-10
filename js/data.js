@@ -8,7 +8,7 @@ export const questions = [
   "Souhlasíte s tvrzením, že členství Česka v EU vede k <b>lepšímu právnímu státu</b> (lepší zákony, vymahatelnost práva, spravedlivost soudů, apod.)?",
   "Souhlasíte s tvrzením, že členství Česka v EU vede k <b>lepšímu stavu politiky v ČR</b> (méně korupce, lepší politická kultura, apod.)?",
   "Souhlasíte s tvrzením, že členství Česka v EU vede k <b>přibližování mezd západním zemím?</b>",
-  "Souhlasíte s tvrzením, že členství Česka v EU vede k <b>vyššímu růst české ekonomiky?</b>",
+  "Souhlasíte s tvrzením, že členství Česka v EU vede k <b>vyššímu růstu české ekonomiky?</b>",
   "Platí pro Vás osobně, že díky Evropské unii <b>máte větší šance najít si práci?</b>",
   "Do jaké míry je pro vás téma fungování EU a její vliv na Česko důležité?<br><small>(0 = nedůležité, 10 = důležité)</small>",
   "Myslíte si, že by se mělo o setrvání Česka v EU hlasovat v referendu?",
@@ -107,7 +107,7 @@ export const graphMeta = [
 
 export const calcData = [
   ["Strach z imigrace", 5, ["malý", "velký"]],
-  ["Pociťovaný profit z globalizace", 5, ["tratí", "vydělává"]],
+  ["Pociťovaný profit z globalizace", 5, ["tratím", "vydělávám"]],
   ["Konzumace komerční TV a alternativních médií", 5, ["malá", "velká"]],
   ["Příjem", 2, ["nízký", "vysoký"]],
   ["Majetek", 2, ["malý", "velký"]],

@@ -4,7 +4,6 @@ import { render } from "react-dom";
 import {
   questions, choices, voterCategories, root,
 } from "./data";
-import { CatDetail } from "./catDetail"
 import { DetailBox } from "./detailBox";
 import "./secondary";
 
@@ -175,10 +174,10 @@ class EuApp extends Component {
             </>
           )}
         </div>
-        <CatDetail catId={catId} handleCatChange={this.handleCatChange} />
         <DetailBox
           catId={catId}
           graphId={graphId}
+          handleCatChange={this.handleCatChange}
           handleGraphChange={this.handleGraphChange}
         />
       </>
