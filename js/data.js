@@ -50,13 +50,13 @@ export const choices = {
 };
 
 export const voterCategories = [
-  ["Obránce", "17 %", "Specificky protievropský a protiglobalizační bojovník. Politicky velmi aktivní. Netrpí chudobou."],
-  ["Protisystémový pesimista", "8 %", "Pasivní a naštvaný autoritář s nízkými kapitály. Nedůvěřuje institucím – národním, ani evropským."],
-  ["Městský liberál", "12 %", "Kavárník s vysokými kapitály. Má velmi liberální a prozápadní postoje. Vnímá prospěch z globalizace."],
-  ["Profitář", "18 %", "Mladší populista. Z členství v unii má osobní prospěch, ale příliš jí nedůvěřuje. Nechce euro."],
-  ["Vyloučený", "16 %", "Solidární chudí, často samoživitelky. Nejsou protievropští ani autoritářští. Politika je nezajímá."],
-  ["Skeptický reformista", "18 %", "Mladší a vzdělanější skeptik s vysokými kapitály. Je proevropský, ale nedůvěřuje fungování unie."],
-  ["Dočasný pragmatik", "11 %", "Starší, středoškolsky vzdělaný pragmatik. Vnímá současný prospěch členství, ale v budoucnu vidí spíš nevýhody."],
+  ["Obránce", "17 %", "Specificky protievropský a protiglobalizační bojovník. Politicky aktivní, aktivně prosazuje czexit. Populista, autoritář. Netrpí chudobou."],
+  ["Protisystémový pesimista", "8 %", "Pasivní a naštvaný autoritář s nízkými kapitály. Nedůvěřuje národním ani evropským institucím kromě prezidenta. Bojí se migrace. Nepřiznává unii žádné výhody."],
+  ["Městský liberál", "12 %", "Má vysoký sociální, kulturní i lidský kapitál, není chudý. Vnímá prospěch z globalizace a nebojí se migrace. Má velmi liberální a prozápadní postoje."],
+  ["Profitář", "18 %", "Mladší, populista. Z členství v unii má prospěch. Detaily fungování EU neřeší, jako instituci jí moc nedůvěřuje. Dopadá na něj strach z migrace. Nechce euro."],
+  ["Vyloučený", "16 %", "Solidární chudí, často samoživitelky či lidé z chudších regionů s exekucemi. Ani protievropští, ani autoritářští. Necítí prospěch z unie, politika je nezajímá."],
+  ["Skeptický reformista", "18 %", "Vzdělaný skeptik s vysokými kapitály. Je proevropský, ale nedůvěřuje fungování unie. Bojí se vlivu dotací na korupci a politiku. Výrazně se o téma zajímá."],
+  ["Dočasný pragmatik", "11 %", "Starší, pragmatik. Vnímá prospěch členství pro ČR a mladé lidi, sám ho příliš nevyužije. V budoucnu vidí spíš nevýhody členství, migraci místo dotací."],
 ];
 
 // 0 = all, then by voterCategories, ie id+1
@@ -107,7 +107,7 @@ export const graphMeta = [
 
 export const calcData = [
   ["Strach z imigrace", 5, ["malý", "velký"]],
-  ["Pociťovaný profit z globalizace", 5, ["tratím", "vydělávám"]],
+  ["Lidé jako já na globalizaci", 5, ["tratí", "vydělávají"]],
   ["Konzumace komerční TV a alternativních médií", 5, ["malá", "velká"]],
   ["Příjem", 2, ["nízký", "vysoký"]],
   ["Kvalita života v obci bydliště", 3, ["nízká", "vysoká"], "Vychází z 13 ukazatelů o obci, kde respondent bydlí. Mimo jiné nezaměstnanost, exekuce, dostupnost zdravotnictví a školství, kriminalita, kvalita ovzduší, apod."],
