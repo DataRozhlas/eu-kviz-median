@@ -189,6 +189,7 @@ a.btn.disabled, fieldset:disabled a.btn {
   display: flex;
   margin-top: 20px;
   justify-content: space-around;
+  margin-bottom: 30px;
 }
 
 #cat-detail-picbox {

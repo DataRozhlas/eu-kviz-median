@@ -2,7 +2,7 @@
 import "core-js/features/object/assign";
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { ClimbingBoxLoader } from "react-spinners";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import {
   questions, choices, voterCategories, root,
 } from "./data";
