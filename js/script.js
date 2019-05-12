@@ -11,6 +11,7 @@ import "./secondary";
 import "./grafSocDemo";
 import "./grafAsociace";
 import "./grafDuvera";
+import "./grafyDuveraMini";
 
 const isDesktop = window.innerWidth > 600;
 

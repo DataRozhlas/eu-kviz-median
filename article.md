@@ -88,6 +88,9 @@ Kalkulačka prozrazuje, jaké faktory ovlivňují současný vztah Čechů k uni
 <wide>
   <div id="graf-duvera"></div>
 </wide>
+<wide>
+  <div id="grafy-duvera-mini"></div>
+</wide>
 
 Pro vztah k unii byly rozhodující tři období. České předsednictví EU v roce 2009 vztah zlepšovalo, zmiňovaná dluhová a ekonomická krize po roce 2009 a migrační krize od roku 2015 jej zhoršovaly.
 

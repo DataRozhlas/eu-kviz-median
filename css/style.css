@@ -51,7 +51,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: transparent;
   border: 1px solid transparent;
   padding: 0.5rem 0.5rem;
   line-height: 1.5;
@@ -108,122 +107,10 @@ a.btn.disabled, fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.btn-5-1 {
-  background-color: #a6611a;
-}
-
-.btn-5-2 {
-  background-color: #dfc27d;
-}
-
-.btn-5-3 {
-  background-color: #bbbbbb;
-}
-
-.btn-5-4 {
-  background-color: #80cdc1;
-}
-
-.btn-5-5 {
-  background-color: #018571;
-}
-
 .btn-11, .btn-12 {
   width: 100%;
   padding: 0;
   line-height: initial;
-}
-
-.btn-11-1 {
-  background-color: #543005;
-}
-
-.btn-11-2 {
-  background-color: #8c510a;
-}
-
-.btn-11-3 {
-  background-color: #bf812d;
-}
-
-.btn-11-4 {
-  background-color: #dfc27d;
-}
-
-.btn-11-5 {
-  background-color: #f6e8c3;
-}
-
-.btn-11-6 {
-  background-color: #dee9d4;
-}
-
-.btn-11-7 {
-  background-color: #c7eae5;
-}
-
-.btn-11-8 {
-  background-color: #80cdc1;
-}
-
-.btn-11-9 {
-  background-color: #35978f;
-}
-
-.btn-11-10 {
-  background-color: #01665e;
-}
-
-.btn-11-11 {
-  background-color: #003c30;
-}
-
-.btn-12-1 {
-  background-color: #543005;
-}
-
-.btn-12-2 {
-  background-color: #8c510a;
-}
-
-.btn-12-3 {
-  background-color: #bf812d;
-}
-
-.btn-12-4 {
-  background-color: #dfc27d;
-}
-
-.btn-12-5 {
-  background-color: #f6e8c3;
-}
-
-.btn-12-6 {
-  background-color: #e6e8ce;
-}
-
-.btn-12-7 {
-  background-color: #def2c4;
-}
-
-.btn-12-8 {
-  background-color: #c5eecb;
-}
-
-.btn-12-9 {
-  background-color: #80cdc1;
-}
-
-.btn-12-10 {
-  background-color: #35978f;
-}
-
-.btn-12-11 {
-  background-color: #01665e;
-}
-
-.btn-12-12 {
-  background-color: #003c30;
 }
 
 #results-categories {
@@ -399,6 +286,20 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .calc-results-number {
   font-weight: bold;
+}
+
+#minigraf-field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#minigraf-field > div {
+  width: 50%;
+}
+
+#minigraf-buttons {
+  display: flex;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 600px) {
