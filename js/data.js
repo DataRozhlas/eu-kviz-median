@@ -163,4 +163,12 @@ export const grafAsociace = {
   cat: ["cestování, studium, práce v zahraničí", "byrokracie", "nedostatečná ochrana hranic", "ztráta peněz", "mír", "kriminalita", "vliv ve světě", "demokracie", "euro", "ztráta kulturní identity", "kulturní diverzita", "hospodářská prosperita", "sociální ochrana", "nezaměstnanost"],
 };
 
+export const grafDuvera = {
+  cz: [60.8, 56.1, 57.2, 57.9, 50.0, 37.0, 36.1, 33.0, 46.3, 26.2, 27.9, 35.3],
+  sk: [61.3, 57.2, 67.9, 69.5, 70.0, 47.1, 47.0, 47.5, 52.6, 36.5, 41.4, 47.7],
+  hu: [59.8, 57.7, 49.0, 51.8, 61.3, 46.6, 45.1, 49.8, 51.4, 41.1, 42.9, 48.5],
+  pl: [56.5, 60.9, 53.8, 50.2, 56.7, 46.0, 53.0, 53.2, 63.4, 37.7, 44.1, 43.1],
+  cat: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+};
+
 export default questions;

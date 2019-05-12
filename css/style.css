@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 /* based on bootstrap buttons */
@@ -272,6 +272,15 @@ a.btn.disabled, fieldset:disabled a.btn {
   font-size: 35px;
 }
 
+#results-waiting {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #results-share {
   display: flex;
   justify-content: space-around;
@@ -327,7 +336,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 #cat-switch {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 5px; 
   flex-wrap: wrap;  
 }

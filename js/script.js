@@ -1,6 +1,8 @@
 ﻿/* eslint-disable react/no-danger */
+import "core-js/features/object/assign";
 import React, { Component } from "react";
 import { render } from "react-dom";
+import { ClimbingBoxLoader } from "react-spinners";
 import {
   questions, choices, voterCategories, root,
 } from "./data";
@@ -8,6 +10,7 @@ import { DetailBox } from "./detailBox";
 import "./secondary";
 import "./grafSocDemo";
 import "./grafAsociace";
+import "./grafDuvera";
 
 const isDesktop = window.innerWidth > 600;
 
@@ -167,8 +170,12 @@ class EuApp extends Component {
                     </div>
                   </>
                 ) : (
-                  <div id="waiting">
-                    {"Výsledek se načítá..."}
+                  <div id="results-waiting">
+                    <ClimbingBoxLoader
+                      size={100}
+                      sizeUnit="%"
+                    />
+                    <div>Čekejte prosím...</div>
                   </div>
                 )
                 }

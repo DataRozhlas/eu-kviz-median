@@ -85,7 +85,9 @@ Kalkulačka prozrazuje, jaké faktory ovlivňují současný vztah Čechů k uni
 
 „Hezky tuhle změnu ilustruje, jak vnímaly a vnímají členství v unii chudé regiony,“ dodává spoluautor analýzy, sociolog Tomáš Dvořák. „Podpora EU v Karlovarském a Ústeckém kraji byla v prvním období členství relativně vysoká, v roce 2009 byla spokojenost v obou regionech okolo 40 procent. Od vstupu do unie pravděpodobně očekávali zlepšení životních podmínek, vyšší platy, dotace, a podobně. Jenže pak přišla ekonomická krize, po ní krize eurozóny a podpora unie se propadla na polovinu. Sotva se spokojenost trochu zvedla, přišla pro změnu migrační krize a propadla se na podobná čísla.“
 
-  LINE CHART PODPORA UNIE U SOCDEMO SKUPIN ČR 2006-2018
+<wide>
+  <div id="graf-duvera"></div>
+</wide>
 
 Pro vztah k unii byly rozhodující tři období. České předsednictví EU v roce 2009 vztah zlepšovalo, zmiňovaná dluhová a ekonomická krize po roce 2009 a migrační krize od roku 2015 jej zhoršovaly.
 
