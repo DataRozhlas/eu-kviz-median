@@ -1,4 +1,4 @@
-title: "Sedm skupin voličů podle postojů k EU: test prozradí, který jste vy"
+title: "Sedm skupin voličů podle postojů k EU: Otestujte, zda jste obranář, profitář nebo městský intelektuá"
 perex: "Debaty v hospodách – a ještě silněji na sociálních sítích – působí dojmem, že Češi se dělí na menšinu „eurohujerů“ a většinu zapřísáhlých euroskeptiků. Skutečnost je jiná: vyhraněných je jen něco přes třetinu."
 published: "13. května 2019"
 coverimg: https://www.irozhlas.cz/sites/default/files/styles/zpravy_snowfall/public/uploader/klastry_190509-184818_jab.png?itok=dvKS4-ml
@@ -12,17 +12,17 @@ options: [] #wide, noheader (, nopic)
 <div>Průzkum Dana Prokopa s agenturou Median pro think-tank Moje Evropa probíhalo na přelomu listopadu a prosince 2018 na vzorku 1000 respondentů. Je reprezentativní pro dospělou populaci Česka podle věku, pohlaví, vzdělání, velikosti obce, kraje, volebního chování ve sněmovních volbách 2017 a frekvence používání internetu. Návrhu průzkumu předcházely skupinové diskuse v Karviné a Táboře o tom, jak české členství vnímají.</div>
 </right>
 
-Češi nejsou jen euroskeptici a eurohujeři. Názory na migraci, euro nebo samotné členství v unii rozdělují Čechy do skupin s podobnými postoji: vedle ostře pro- a protiunijních třeba profitáře, kteří z unie těží, ale jinak jí nedůvěřují. Průzkum sociologa Daniela Prokopa a Medianu pro think-tank Moje Evropa prozrazuje, co pojí skupiny dohromady i koho volí.
+„Ve skutečnosti je málokdo ve všech ohledech proevropský nebo protievropský,“ vysvětluje sociolog Daniel Prokop. „Někdo vnímá přínosy pro Česko, ale je kritický k fungování EU jako instituce. Pak jsou tu chudší lidé, kterým unie nevadí, ale zase necítí přínos pro sebe. Řada dalších je sice proevropská, ale odmítají euro a vadí jim vliv dotací na právní stát a politiku.“
 
-„Ve skutečnosti je málokdo ve všech ohledech proevropský nebo protievropský,“ vysvětluje autor průzkumu Daniel Prokop. „Někdo vnímá přínosy pro Česko, ale je kritický k fungování EU jako instituce. Pak jsou tu chudší lidé, kterým unie nevadí, ale zase necítí přínos pro sebe. Řada dalších je sice proevropská, ale odmítají euro a vadí jim vliv dotací na právní stát a politiku.“
+Vychází z průzkumu pro think-tank Moje Evropa, na kterém spolupracoval s agenturou Median. Z výsledků vyplynulo, že názory na migraci, euro nebo samotné členství v unii rozdělují Čechy do skupin s podobnými postoji: vedle ostře pro- a protiunijních třeba profitáře, kteří z unie těží, ale jinak jí nedůvěřují. Prozrazuje, co pojí skupiny dohromady i koho volí.
 
 Sociologové proto vytvořili typologii respondentů a každého zařadili do jedné ze skupin.
 
-„Určité kombinace postojů se typicky vyskytují pohromadě,“ doplňuje ho statistik Medianu Jaroslav Horníček. „Třeba strach z migrantů a obavy z globalizace jdou často ruku v ruce s autoritářstvím požadujícím tvrdou ruku, podporou opuštění unie – _czexitu_ – a odmítáním prospěšnosti členství. Společensky znevýhodnění lidé – z chudých obcí, s menším množstvím kontaktů a bez potřebných kompetencí – zase typicky neřeší unijní politiku, ale vadí jim malý dopad na vlastní život. Našli jsme sedm segmentů, které se dost liší a zároveň pokrývají celé spektrum vnímání EU,“ dodává.
+„Určité kombinace postojů se typicky vyskytují pohromadě,“ vysvětluje statistik Medianu Jaroslav Horníček. „Třeba strach z migrantů a obavy z globalizace jdou často ruku v ruce s autoritářstvím požadujícím tvrdou ruku, podporou opuštění unie – _czexitu_ – a odmítáním prospěšnosti členství. Společensky znevýhodnění lidé – z chudých obcí, s menším množstvím kontaktů a bez potřebných kompetencí – zase typicky neřeší unijní politiku, ale vadí jim malý dopad na vlastní život. Našli jsme sedm segmentů, které se dost liší a zároveň pokrývají celé spektrum vnímání EU,“ dodává.
 
-Do segmentace vstupovaly vnímané přínosy členství – jak pro sebe, tak pro současné Česko a pro jeho budoucnost –, hodnocení fungování EU i národních institucí, postoje k czexitu a euru nebo vnímání globalizaci a migrace. Vedle postojů rozhodovalo také to, jaké je postavení respondenta ve společnosti, tedy jeho ekonomický, sociální a kulturní kapitál.
+Při rozdělení do skupin hrály roli vnímané přínosy členství – jak pro sebe, tak pro současné Česko a pro jeho budoucnost –, hodnocení fungování EU i národních institucí, postoje k czexitu a euru nebo vnímání globalizaci a migrace. Vedle postojů rozhodovalo také to, jaké je postavení respondenta ve společnosti, tedy jeho ekonomický, sociální a kulturní kapitál.
 
-K rozdělení respondentů do zmíněných klastrů výzkumníci použili téměř sedmdesát otázek. Dvacet z nich, které nejlépe předpoví, do které skupiny se zařadíte, vybrali pro následující test. Sada otázek dokáže vaši pozici odhadnout s osmdesátiprocentní přesností.
+K rozdělení respondentů výzkumníci použili téměř sedmdesát otázek. Dvacet z nich, které nejlépe předpoví, do které skupiny se zařadíte, vybrali pro následující test. Sada otázek dokáže vaši pozici odhadnout s osmdesátiprocentní přesností.
 
 <div id="eu-app"></div>
 
@@ -37,7 +37,7 @@ Nejvíce proevropští jsou _městští liberálové_: mladší, obvykle vysoko�
 <li><div><strong>Profit z globalizace</strong></div><div>Subjektivní pocit, zda lidé jako respondent profitují nebo ztrácí na globalizaci a moderních trendech společnosti.</div></li>
 <li><div><strong>Míra autoritářství</strong></div><div>Postoj zdůrazňující roli silných vůdců, pořádku a tradiční morálky, a vyzdvihující práva většiny oproti menšinám.</div></li>
 <li><div><strong>Kulturní kapitál</strong></div><div>Vzdělání a vlastnictví knih určující společenskou orientaci.</div></li>
-<li><div><strong>Lidský kapitál</strong></div><div>Jazykové a ICT kompetence dotázaných, které jim usnadňují uplatnění.</div></li>
+<li><div><strong>Lidský kapitál</strong></div><div>Jazykové kompetence a schopnost práce s počítačem, které usnadňují uplatnění.</div></li>
 <li><div><strong>Sociální kapitál</strong></div><div>Šíře a bohatství sociálních kontaktů a vztahů – měřeno tím, kolik lidí z vybraných prestižních profesí respondent zná.</div></li>
 <li><div><strong>Ekonomický kapitál</strong></div><div>Příjem a majetek respondenta.</div></li>
 <li><div><strong>Kvalita života v obci</strong></div><div>Vybavenost místa bydliště (MŠ, ZŠ, zdravotní zařízení, přístup k internetu), dlouhověkost, emise, pozice sídla v rámci ČR, míra nezaměstnanosti, bezpečnost a zatížení exekucemi v lokalitě. Podrobně se jí věnuje <a href="https://www.irozhlas.cz/zpravy-domov/mapa-kvality-zivota-median-prokop-kscm-spd_1811220600_jab">interaktivní mapa kvality života</a>.</div></li>
@@ -59,7 +59,7 @@ U poslední skupiny, _vyloučený_, výzkumníci zvažovali také název _solid�
 
 „Chudobu a sociální znevýhodnění často spojujeme s radikalizací a nedůvěrou v západní směřování,“ vysvětluje Prokop. „Tady je ale silná skupina Evropanů netěžících z Evropy a demokratů netěžících z demokracie. Měli bychom se asi ptát, zda by jim růst ekonomiky neměl přispět více.“
 
-## Klíčové pro vztah k EU: migrace, globalizace a alternativní média
+## Příčiny nespokojenosti: příjmy ani věk nerozhodují
 
 Nepřekvapí, že Češi jsou k Evropské unii kritičtí, jen třetina je spokojena s jejím fungováním. Zajímavější je kontext: u většiny Čechů nejde o specifickou nedůvěru vůči unii, ale celkovou nedůvěru k institucím. Podobně nízká čísla se objevují také při otázce na důvěru českému parlamentu, vládě nebo prezidentovi. Jen čtvrtina respondentů nedůvěřuje EU více než národním politickým institucím.
 
@@ -77,7 +77,7 @@ Největšími kritiky EU jsou podle výzkumníků ti, kteří podle svého názo
 
 Například ti, kteří se cítí ohrožení migrací, vidí členství v EU jako prospěšné pouze v 31 procentech, na opačném pólu je to 91 procent. Podobně ti, kteří si myslí, že na globalizaci tratí, vidí prospěch EU ve 38 procentech, subjektivní vítězové globalizace v 82 procentech.
 
-## Při vstupu do unie rozhodovaly o důvěře pozitivní asociace, dnes negativní
+## Dříve rozhodovala pozitiva, nyní negativa
 
 Kalkulačka prozrazuje, jaké faktory ovlivňují současný vztah Čechů k unii. Během patnáctiletého členství se ale podle výzkumníků, kteří tentokrát zkoumali data z celoevropských průzkumů Eurobarometr a šetření CVVM, podstatně změnily priority Čechů: v roce 2006 o vztahu Čechů k unii rozhodovalo vnímání ekonomických výhod, dnes vztah k politické integraci.
 
