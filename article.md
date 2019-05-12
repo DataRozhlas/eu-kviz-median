@@ -1,4 +1,4 @@
-title: "Sedm skupin voličů podle postojů k EU: Otestujte, zda jste obranář, profitář nebo městský intelektuá"
+title: "Sedm skupin voličů podle postojů k EU: Otestujte, zda jste obranář, profitář nebo městský intelektuál"
 perex: "Debaty v hospodách – a ještě silněji na sociálních sítích – působí dojmem, že Češi se dělí na menšinu „eurohujerů“ a většinu zapřísáhlých euroskeptiků. Skutečnost je jiná: vyhraněných je jen něco přes třetinu."
 published: "13. května 2019"
 coverimg: https://www.irozhlas.cz/sites/default/files/styles/zpravy_snowfall/public/uploader/klastry_190509-184818_jab.png?itok=dvKS4-ml
@@ -85,7 +85,7 @@ Kalkulačka prozrazuje, jaké faktory ovlivňují současný vztah Čechů k uni
 
 „Hezky tuhle změnu ilustruje, jak vnímaly a vnímají členství v unii chudé regiony,“ dodává spoluautor analýzy, sociolog Tomáš Dvořák. „Podpora EU v Karlovarském a Ústeckém kraji byla v prvním období členství relativně vysoká, v roce 2009 byla spokojenost v obou regionech okolo 40 procent. Od vstupu do unie pravděpodobně očekávali zlepšení životních podmínek, vyšší platy, dotace, a podobně. Jenže pak přišla ekonomická krize, po ní krize eurozóny a podpora unie se propadla na polovinu. Sotva se spokojenost trochu zvedla, přišla pro změnu migrační krize a propadla se na podobná čísla.“
 
-LINE CHART PODPORA UNIE U SOCDEMO SKUPIN ČR 2006-2018
+  LINE CHART PODPORA UNIE U SOCDEMO SKUPIN ČR 2006-2018
 
 Pro vztah k unii byly rozhodující tři období. České předsednictví EU v roce 2009 vztah zlepšovalo, zmiňovaná dluhová a ekonomická krize po roce 2009 a migrační krize od roku 2015 jej zhoršovaly.
 
@@ -97,8 +97,14 @@ Od roku 2016 podpora unii mezi Čechy roste. Přesto jsme mezi okolními zeměmi
 
 „Důležitější roli v hodnocení EU hrají dlouhodobé a silně zakořeněné generalizující postoje, které ji popisují jako byrokratickou, plýtvající penězi nebo přehnaně politicky korektní,“ dodává Dvořák.
 
-BAR CHART AKTUÁLNÍ PODPORA UNIE U RŮZNÝCH SOCDEMO SKUPIN VE V4
+<wide>
+  <div id="graf-duvera-socdemo"></div>
+</wide>
 
 Pro Česko je typická nedůvěra vůči unii u starších věkových skupin. U ostatních zemích Visegrádu tak silný generační konflikt není. Na rozdíl od Maďarska a Polska u nás také EU častěji podporují voliči pravice, zatímco v obou zemích je důvěra unii spojena spíš s levicovými hodnotami. Na Slovensku je velmi pozitivně vnímáno euro.
 
 „Evropské unii nedůvěřujeme, protože se na její prospěšnosti na rozdíl od Polska a Slovenska neshodnou sociální skupiny. Bohatí mladí a vzdělaní se od sousedů neliší, ale zbytek výrazně. Není tady konsensus nad přínosy. Členství také příliš nepomohlo chudým regionům. Každá krize se přetaví do hysterie a EU do symbolu elitářství, nevýhodné globalizace a byrokracie,“ uzavírá Daniel Prokop.
+
+<wide>
+  <div id="graf-asociace"></div>
+</wide>

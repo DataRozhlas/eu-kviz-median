@@ -6,7 +6,8 @@ import {
 } from "./data";
 import { DetailBox } from "./detailBox";
 import "./secondary";
-
+import "./grafSocDemo";
+import "./grafAsociace";
 
 const isDesktop = window.innerWidth > 600;
 

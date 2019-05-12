@@ -145,4 +145,22 @@ export const calcResults = [
   ],
 ];
 
+export const grafColor = ["#EA614A", "#ECA038", "#A38456", "#008836", "#20649B", "#6B96CA", "#A87A93", "#D19C95"];
+
+export const grafSocDemoData = {
+  cz: [35.5, 35.1, 47.4, 27.1, 20.1, 44.8, 23.0, 51.4, 23.0, 37.7, 46.9, 29.2, 39.1, 26.8, 30.7, 49.3, 28.0, 51.0],
+  sk: [46.9, 48.5, 54.7, 43.5, 38.2, 55.6, 42.9, 66.4, 34.8, 51.1, 43.1, 52.4, 45.3, 55.8, 45.4, 58.2, 31.0, 51.0],
+  hu: [47.4, 49.4, 50.1, 49.9, 49.6, 47.4, 44.6, 49.5, 39.4, 55.6, 40.2, 52.0, 47.7, 64.1, 48.6, 49.5, 49.0, 64.1],
+  pl: [40.1, 45.9, 46.1, 39.7, 30.4, 51.0, 32.6, 80.8, 44.3, 44.6, 36.7, 39.9, 55.7, 54.8, 45.1, 42.6, 36.0, 50.0],
+  cat: ["muž", "žena", "pod 30", "nad 60", "ZŠ, neúplné SŠ", "VŠ a VOŠ", "nízký", "vysoký", "nízký", "vysoký", "venkov", "maloměsto", "velkoměsto", "levice", "střed", "pravice", "nízká", "vysoká"],
+};
+
+export const grafAsociace = {
+  cz: [51.6, 41.6, 39.3, 37.8, 33.6, 27.6, 23.3, 22.7, 20.4, 18.6, 17.4, 16.2, 9.8, 9.2],
+  sk: [57.4, 32.7, 20.6, 26.9, 31.7, 25.1, 32.5, 25.1, 48.3, 14.2, 27.3, 23.3, 11.7, 13.4],
+  hu: [43.1, 15.0, 23.4, 10.7, 19.5, 16.7, 19.1, 19.4, 12.3, 8.9, 20.6, 16.3, 8.2, 7.0],
+  pl: [56.8, 18.0, 17.0, 12.0, 25.5, 10.2, 25.1, 25.6, 24.1, 11.4, 22.3, 17.0, 8.6, 3.7],
+  cat: ["cestování, studium, práce v zahraničí", "byrokracie", "nedostatečná ochrana hranic", "ztráta peněz", "mír", "kriminalita", "vliv ve světě", "demokracie", "euro", "ztráta kulturní identity", "kulturní diverzita", "hospodářská prosperita", "sociální ochrana", "nezaměstnanost"],
+};
+
 export default questions;
