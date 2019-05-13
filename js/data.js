@@ -21,7 +21,7 @@ export const questions = [
   "Souhlasíte s tím, že <b>silný vůdce je důležitý pro Českou republiku, i když nebude vždy jednat v souladu se zavedenými pravidly?</b>",
   "Souhlasíte s tím, že <b>obyčejný člověk by v politice reprezentoval mé zájmy lépe nežli profesionální politik?</b>",
   "Souhlasíte s tím, že <b>imigranti mohou ohrožovat českou ekonomiku a sociální stát?</b>",
-  "V politice lidé někdy hovoří o pravici a levici. Kam byste se sám/sama zařadil(a) na této stupnici?<br><small>(0 = levice, 11 = pravice)</small>",
+  "V politice lidé někdy hovoří o pravici a levici. Kam byste se sám/sama zařadil(a) na této stupnici?<br><small>(0 = levice, 10 = pravice)</small>",
 ];
 
 const defaultChoices = ["Určitě ano", "Spíše ano", "Nevím", "Spíše ne", "Určitě ne"];
