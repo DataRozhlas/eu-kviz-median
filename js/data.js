@@ -13,7 +13,7 @@ export const questions = [
   "Do jaké míry je pro vás téma fungování EU a její vliv na Česko důležité?<br><small>(0 = nedůležité, 10 = důležité)</small>",
   "Myslíte si, že by se mělo o setrvání Česka v EU hlasovat v referendu?",
   "Hlasoval byste v případném referendu <b>pro setrvání Česka v EU?</b>",
-  "Souhlasíte s tím, aby byla za měnu České republiky přijata společná evropská měna?",
+  "Souhlasíte s tím, aby bylo za měnu České republiky přijato euro?",
   "Souhlasíte s tvrzením, že <b>EU příliš zasahuje do vnitřních záležitostí ČR</b>? (Má příliš velký vliv na českou politiku a omezuje Česko evropskými zákony a regulací.)",
   "Souhlasíte s tvrzením, že z <b>evropské integrace těží velké státy, které rozhodují na úkor malých států (jako Česká republika)</b>, jejichž zájmy neberou v potaz?",
   "Souhlasíte s tvrzením, že <b>EU udělala hodně pro to, aby se v ČR zvýšila životní úroveň a přiblížila se tak životní úrovni v zemích Západní Evropy?</b>",
