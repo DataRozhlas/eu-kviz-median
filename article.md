@@ -1,4 +1,4 @@
-title: "Sedm skupin voličů podle postojů k EU: Otestujte, zda jste obranář, profitář nebo městský intelektuál"
+title: "Sedm skupin voličů podle postojů k EU: Otestujte, zda jste obranář, profitář nebo městský liberál"
 perex: "Debaty v hospodách – a ještě silněji na sociálních sítích – působí dojmem, že Češi se dělí na menšinu „eurohujerů“ a většinu zapřísáhlých euroskeptiků. Skutečnost je jiná: vyhraněných je jen něco přes třetinu."
 published: "13. května 2019"
 coverimg: https://www.irozhlas.cz/sites/default/files/styles/zpravy_snowfall/public/uploader/klastry_190509-184818_jab.png?itok=dvKS4-ml

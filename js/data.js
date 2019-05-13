@@ -46,11 +46,11 @@ export const choices = {
   16: defaultChoices,
   17: defaultChoices,
   18: defaultChoices,
-  19: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+  19: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "Nevím"],
 };
 
 export const voterCategories = [
-  ["Obránce", "17 %", "Specificky protievropský a protiglobalizační bojovník. Politicky aktivní, aktivně prosazuje czexit. Populista, autoritář. Netrpí chudobou."],
+  ["Obránce", "17 %", "Specificky protievropský či protiglobalizační bojovník. Politicky aktivní, aktivně prosazuje czexit. Většinově populista, autoritář. Netrpí chudobou."],
   ["Protisystémový pesimista", "8 %", "Pasivní a naštvaný autoritář s nízkými kapitály. Nedůvěřuje národním ani evropským institucím kromě prezidenta. Bojí se migrace. Nepřiznává unii žádné výhody."],
   ["Městský liberál", "12 %", "Má vysoký sociální, kulturní i lidský kapitál, není chudý. Vnímá prospěch z globalizace a nebojí se migrace. Má velmi liberální a prozápadní postoje."],
   ["Profitář", "18 %", "Mladší, populista. Z členství v unii má prospěch. Detaily fungování EU neřeší, jako instituci jí moc nedůvěřuje. Dopadá na něj strach z migrace. Nechce euro."],
