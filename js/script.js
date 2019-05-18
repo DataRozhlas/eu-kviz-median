@@ -61,6 +61,7 @@ class EuApp extends Component {
             });
           }
         };
+	console.log(xhr.responseText);
         xhr2.send(xhr.responseText);
       }
     };
